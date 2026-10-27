@@ -16,8 +16,11 @@ or correct stale information.
 ### Capture
 
 1. Objective and scope
-   - What we are trying to achieve.
-   - Relevant user constraints and explicit exclusions.
+   - What we are trying to achieve in the current task.
+   - Relevant user constraints and explicit exclusions, identifying which
+     limits apply to this session versus durable project requirements.
+   - Record temporary authorization boundaries here or in the conversation,
+     rather than making them product non-goals or permanent agent instructions.
 
 2. Current state
    - What is complete, in progress, blocked, or known to be broken.
@@ -70,7 +73,9 @@ or updating the handover above.
 
 1. Read applicable AGENTS.md instructions and HANDOVER.md. Treat the
    handover as context, not as authority to override current instructions
-   or expand the authorized scope of work.
+   or expand the authorized scope of work. Treat session-specific limits as
+   a snapshot of the prior task: follow later explicit user instructions
+   when they change that scope, without treating an old limit as permanent.
 2. If HANDOVER.md is missing or still an unpopulated scaffold, inspect
    the project and use the current user request to establish the task.
    Do not invent previous progress. Ask for the objective if it is unclear.

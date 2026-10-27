@@ -2,160 +2,103 @@
 
 Status: Draft template — requirements undecided.
 
-This scaffold does not represent agreed requirements.
-Populate it through Cartographer's specification workflow using the bundled
-grilling instructions. Grilling develops shared understanding; the written
-specification remains Draft until explicitly accepted by the user.
-
-<!-- Keep confirmed requirements separate from proposals and assumptions.
-Populate substantive sections progressively during discovery; the decision
-map indexes outcomes rather than replacing section content. For a complete
-review draft, every section needs substantive content, an explicit unresolved
-item with impact and next action, or a justified not-applicable statement.
-Do not present unexplained empty headings as a completed specification.
-Remove instructional comments when populated. For paused interviews,
-retain an incomplete Draft, missing coverage, and the next frontier.
-New-project AGENTS.md is populated after written-spec acceptance unless
-explicitly requested earlier; preserve any existing instructions. -->
-
 ## Project name
 
-<!-- Ask what the project should be called; explain that we can return to
-this later. Preserve a supplied name. If undecided, record a descriptive
-working title as provisional and revisit when useful. This is not a blocker
-for spec acceptance or permission to rename directories or choose a domain. -->
+<!-- Confirmed name or explicitly provisional working title. -->
 
 ## Goals and intended users
 
-<!-- Who is this for, what problem does it solve, and how is success measured? -->
+<!-- Intended users, problem, desired outcomes, and success measures. -->
 
 ### Current process and pain point
 
-<!-- Ask how the user handles the need today and for one concrete difficulty,
-recent example, or personal motivation. Record their account and connect it
-to the desired improvement and success criteria. Do not invent incidents or
-ask again if already answered. For a new need without an existing process,
-record that and the intended outcome; the user may defer or skip this detail. -->
+<!-- The user's current approach and concrete difficulty or motivation;
+record when no current process exists or the question is deferred. -->
 
 ## Core workflows
 
-<!-- Describe the key user journeys or non-UI workflows. -->
+<!-- Key user journeys or non-UI workflows. -->
 
 ## Scope and non-goals
 
-<!-- Define the agreed first release and its intended use (for example,
-a prototype, private pilot, or real-data release). Keep design proportional
-and distinguish its requirements from later release gates. -->
+<!-- Product scope: first release's intended use, behavior, and exclusions. -->
+
+## Central alternatives and tradeoffs
+
+<!-- The user's central choice, credible options, fit, tradeoffs, added infrastructure,
+cost/operator burden, recommendation, and decision ID/outcome. Note if none remain. -->
+
+## Consequential commitments
+
+<!-- Summarize recurring costs, operator duties, major subsystems, and hard-to-reverse
+choices: burden, release stage, decision ID/status, unresolved choice, and detail link.
+State if none are identified. -->
 
 ## Acceptance criteria
 
-<!-- Observable outcomes that establish whether the agreed scope works. -->
+<!-- Observable outcomes and important failure cases. -->
 
 ## Design decisions and dependencies
 
-<!-- Summarize material decisions from the grilling interview using stable
-IDs (D1, D2, ...). Record outcomes and brief rationale, not a transcript.
-
-Show dependencies as a compact indented tree or outline. Reference IDs
-for additional prerequisites instead of duplicating nodes. For each node,
-record the question, state, prerequisites, outcome or open options, and
-relevant spec section. States: Agreed, Proposed, Open, Deferred.
-Recommendations remain Proposed until the user agrees. If a prerequisite
-changes, revisit its dependent decisions.
-
-Illustrative structure only — replace it with actual project decisions:
-- D1: [Product decision] — [state]; prerequisites: none.
-  Outcome/options: [...]. Rationale: [...]. See [Scope](#scope-and-non-goals).
-  - D2: [Dependent design decision] — [state]; prerequisites: D1.
-    Outcome/options: [...]. Rationale: [...]. See the relevant spec section.
-
-This is a concise decision index, not an interview log or feature backlog.
-Record only material choices and their dependencies, avoid duplicate scope
-nodes, and put detailed requirements in their own sections. -->
+<!-- Compact decision outline: ID, state, prerequisites, outcome/options,
+brief rationale, and relevant section. States: Agreed, Proposed, Open, Deferred. -->
 
 ### Next interview frontier
 
-<!-- For an incomplete Draft, list questions whose prerequisites are
-settled, plus research blockers and coverage still needed. Track the current
-coverage area: product, data/security, technical design, screens/design,
-or delivery. Transition to proposing a coherent design once product direction
-is sufficient; ask about material choices, not every implementation detail.
-Deferred decisions and their dependents remain unresolved. Once no questions remain,
-state that shared understanding was confirmed; do not imply spec acceptance. -->
+<!-- Incomplete-draft working notes only: ready questions, blockers, missing coverage. -->
 
 ## Tech stack and rationale
 
+<!-- Selected or proposed technologies and meaningful tradeoffs. -->
+
 ## Data sources, APIs, and data models
 
-<!-- Record agreed entry/import/export methods and integrations as they emerge.
-Propose essential entities, relationships, and lifecycle rules for review. -->
+<!-- Entry/import/export methods, integrations, entities, relationships, lifecycle. -->
 
 ## Project folder structure
 
-<!-- Propose a structure appropriate to the selected stack. Label it proposed
-until agreed; it does not imply files or application code already exist. -->
+<!-- Planned layout, distinguished from existing files. -->
 
 ## Pages and screens
 
-<!-- Propose the screen inventory, key states, and ASCII wireframes using
-the agreed workflows. Explain why not applicable for projects without a UI. -->
+<!-- Screen inventory, key states, and ASCII wireframes; explain if not applicable. -->
 
 ## Components and API contracts
 
-<!-- Propose component responsibilities, interfaces, inputs/outputs, and
-important error cases at the level needed to guide implementation. -->
+<!-- Responsibilities, boundaries, inputs/outputs, and important errors. -->
 
 ## UI/UX design system
 
-<!-- Propose a coherent visual system (colors, typography, component style)
-and accessibility requirements. Distinguish proposals from user agreements. -->
+<!-- Colors, typography, component style, and accessibility requirements. -->
 
 ## Authentication, authorization, and data privacy
 
-<!-- Describe accounts, access boundaries, data ownership, and relevant privacy
-needs. Keep stack selection provisional while requirements affecting it are open. -->
+<!-- Accounts, access boundaries, ownership, and relevant privacy needs. -->
 
 ## Environment variables
 
-<!-- Propose names and purposes from the selected services; distinguish
-public/client configuration from server-only secrets. Never include values. -->
+<!-- Names, purposes, and public/server-only placement; no secret values. -->
 
 ## Deployment plan
 
-<!-- Propose hosting and service responsibilities, configuration, and relevant
-operational requirements. Distinguish planned setup from provisioned resources.
-Surface recommendations introducing recurring costs, ongoing operator work,
-or substantial subsystems during design review, including their benefit,
-burden, and simpler alternatives. Keep unagreed commitments Proposed. -->
+<!-- Proposed hosting, service responsibilities, costs, and operator work. -->
 
 ### Release gates
 
-<!-- Separate requirements for the agreed first release from gates applying
-to a later stage, naming that stage and what triggers each gate. Record
-agreed commitments and unresolved choices without silently expanding MVP
-work. Do not defer safeguards necessary for the first release's actual use.
-If no later gates are needed, say so briefly. -->
+<!-- First-release prerequisites versus later gates, their triggers and open choices. -->
 
 ## Development phases
 
-<!-- Define P0/P1/P2/P3 priorities and high-level, verifiable milestones. -->
+<!-- P0/P1/P2/P3 definitions and verifiable milestones. -->
 
 ### Feature plans
 
-<!-- Identify complex features that warrant separate execution plans.
-Label suggested plans as not yet created. Link only to existing files in
-docs/plans/; do not create a plan for every decision-tree branch.
-Create feature plans when requested, after their relevant scope is agreed.
-Small features may need no separate plan. If none are selected, say so;
-do not leave this section unexplained or invent plan links. -->
+<!-- Suggested plans versus links to existing plans; state if none are selected. -->
 
 ## Constraints, risks, and known limitations
 
-<!-- Carry forward usage constraints, budget/timing boundaries, excluded
-capabilities, and material risks; do not invent numeric limits. -->
+<!-- Usage, budget/timing boundaries, material risks, and limitations. -->
 
 ## Open questions and assumptions
 
-<!-- Reference decision IDs where relevant. Identify implementation
-blockers, deferred items, and assumptions requiring validation. Explicitly
-state any limited accepted scope rather than treating deferrals as settled. -->
+<!-- Decision IDs, deferred items, impacts, and validation or resolution steps. -->

@@ -20,7 +20,8 @@ carrying forward unfinished work and removing stale information.
 
 ## Objective and scope
 
-<!-- State the active goal, relevant constraints, and exclusions. -->
+<!-- State the active task, constraints, and exclusions; distinguish temporary
+session authorization from durable project requirements. -->
 
 ## Current state
 

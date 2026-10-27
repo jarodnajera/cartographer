@@ -6,206 +6,204 @@ I'm about to build a new project:
 [Describe the idea in 2–3 sentences.]
 
 Help me develop a concrete SPEC.md before writing application code.
+Use the following workflow for new foundations or focused spec revisions.
 
-## Preparation
+## Prepare the project and resources
 
-1. Inspect existing project files and documentation. Preserve established
-   requirements and identify contradictions or missing context. Distinguish
-   proposed capabilities from implemented behavior.
-2. Read both bundled resources, resolving these links relative to this
-   prompt file in Cartographer's installed skill folder:
-   - [Grilling instructions](../grilling/SKILL.md)
-   - [SPEC template](../../assets/templates/SPEC.md)
-   Do not assume the target project contains these resources. Read the
-   actual grilling instructions; merely mentioning the skill does not load it.
-3. If the bundled grilling reference is unavailable, use a discoverable
-   installed grilling skill. If neither is available, disclose that and
-   offer to restore the dependency or proceed with a direct interview;
-   do not claim to have used the skill without reading it.
+Inspect existing documentation and relevant project evidence. Preserve established
+requirements and distinguish implemented behavior from proposals. Resolve these
+bundled links relative to this prompt, not the target project:
 
-## Interview using grilling
+- [SPEC template](../../assets/templates/SPEC.md)
+- [Grilling instructions](../grilling/SKILL.md)
+- [Documentation templates](../../assets/templates/)
 
-Use grilling's design tree and dependency-aware rounds to resolve the
-specification. The coverage list below guides which decisions to explore;
-it is not a questionnaire to ask all at once.
+Read the actual grilling instructions before interviewing. If unavailable, locate
+an installed grilling skill; if neither is accessible, disclose the missing
+resource and offer to restore it or conduct a direct interview without claiming
+the skill was loaded.
 
-- Start with the problem, intended users, core workflows, desired outcomes,
-  non-goals, and constraints before choosing technology.
-- Ask what the project should be called if I have not already supplied a name.
-  Tell me we can return to it later. If undecided, record a descriptive working
-  title as provisional; naming does not block discovery or spec acceptance.
-  Preserve an existing project name unless I request a rename. Do not rename
-  directories or select a domain as part of this question.
-- Ask how I handle this need today and for one concrete pain point, recent
-  difficulty, or personal motivation: "What happens today, what is frustrating,
-  and what would be better with this project?" Use an answer already provided
-  instead of asking again. If there is no current process or I prefer to skip,
-  record that and clarify the desired outcome without inventing an incident.
-  Connect this evidence to scope and observable success criteria.
-- Treat each material decision as a node. Identify prerequisite decisions
-  and ask only the current frontier: questions whose prerequisites are
-  settled. Number each question, give a clear recommended answer, and
-  follow grilling's question format. Wait for my answers before moving on.
-- Recompute the frontier after each round. If an answer changes an earlier
-  decision, reopen affected downstream decisions instead of retaining
-  incompatible conclusions.
-- Investigate discoverable facts yourself. Use sub-agents when available
-  and permitted; otherwise investigate directly. Keep research-dependent
-  questions pending while progressing on independent decisions.
-- Challenge my choices when there is a better option. Explain the tradeoff
-  and let me decide; never treat your recommendation as my answer.
-- When the interview reaches shared understanding, summarize the decisions
-  and ask me to confirm before synthesizing the complete specification.
+When scaffolding is requested, copy missing templates into the target project:
+SPEC.md, AGENTS.md, and HANDOVER.md; docs/ARCHITECTURE.md, TESTING.md, RUNBOOK.md,
+COMPENDIUM.md; docs/plans/PLANS.md and its .gitkeep; docs/adr/ and docs/research/
+with .gitkeep. Exclude optional profiles, memory, and hook configuration.
 
-After each answered round, update the relevant substantive sections with
-confirmed findings and clearly labeled proposals. For example, agreed data
-entry/export methods belong in the data section, not only the decision map.
-Do not wait for the complete-spec synthesis to record useful section content.
+For a new project, create a missing AGENTS.md from its bundled template during
+scaffolding, leaving it unseeded. Seed it with project-specific guidance after
+acceptance of the complete written SPEC.md, unless the user explicitly requests
+earlier seeding. Creating the template is not the same as populating it.
+Always read and preserve existing agent instructions.
 
-If I pause, preserve an explicitly incomplete Draft with settled decisions,
-open questions, coverage still needed, and the next frontier. If I choose to defer a decision,
-record its impact; deferral does not settle its dependent decisions.
+Create files exclusively; preserve existing files, including empty ones. Report
+symlink or incompatible-path conflicts instead of overwriting. When population
+is requested, read existing content and make focused updates. Copy empty templates
+as empty; other documents need not be populated before the foundation is ready.
+Unknown commands, architecture, or operations must not be fabricated.
 
-## Discovery coverage and transition to design
+## Interview and progressive drafting
 
-Use this sequence to guide coverage, not as artificial prerequisites or a
-fixed question count. Keep grilling's frontier dependency-aware; independent
-questions may span areas, while a recommendation affected by an unanswered
-question must remain provisional.
+Use grilling's design tree, question format, and dependency-aware rounds. Ask
+questions whose prerequisites are settled, wait for answers, and recompute the
+frontier after each round. Research discoverable facts directly; use sub-agents
+only when available and permitted. Reopen dependent decisions when an answer
+changes a prerequisite. Recommendations are not user decisions.
 
-1. Product direction: project name or provisional working title, users,
-   current process and concrete pain point/motivation, main workflows,
-   MVP scope/non-goals, success criteria, and usage constraints.
-2. Data and security: sources, essential records and lifecycle, integrations,
-   access/ownership rules, and notification or other critical behavior.
-3. Technical design: stack, component/API boundaries, proposed folder
-   structure, environment variables, and service responsibilities.
-4. Screens and design: screen inventory, key states and ASCII wireframes,
-   visual-system proposal, and accessibility.
-5. Delivery: deployment, operational constraints, risks, priorities,
-   verifiable milestones, and suggested feature plans.
+Early in discovery, cover:
 
-Do not keep expanding product discovery after there is enough direction to
-propose a viable first version. Ask further questions when their answers
-materially affect scope, feasibility, user experience, cost, or risk. Suggest
-later-scope treatment for tangents and let me decide if they matter now.
+- Project name: ask if not supplied, explaining it can be revisited. Preserve an
+  existing name; use a provisional working title if undecided. Naming never blocks
+  discovery or acceptance and does not authorize directory renaming or a domain.
+- Current process and pain point: ask what happens today, one concrete difficulty
+  or personal motivation, and what improvement the user wants. Use information
+  already supplied rather than asking again. If there is no process or the user
+  skips the question, record that without inventing an incident.
+- Users, core workflows, desired outcomes, first-release scope/non-goals, usage
+  constraints, and observable success criteria before choosing technology.
 
-When core product decisions are settled, explicitly transition: explain that
-there is enough direction to propose the remaining technical and visual design.
-Research and present a coherent proposal, grouped for review, rather than
-requiring me to design each folder, component, color, or variable name.
-Explain consequential alternatives and ask for decisions where needed. Keep
-all unaccepted recommendations Proposed, even when they form a complete draft.
+Move coverage from product direction to data/security, technical design,
+screens/design, and delivery. These are coverage areas, not artificial
+prerequisites or a fixed question count. Ask follow-ups when they materially
+affect scope, feasibility, experience, cost, or risk; suggest later scope for
+tangents and let the user decide.
+
+After each round, populate the substantive spec sections with confirmed findings
+and labeled proposals. The decision map indexes those sections rather than
+replacing them. If paused, preserve an incomplete Draft, outstanding coverage,
+research blockers, and the next frontier. Deferral does not settle dependencies.
+
+## Compare the central alternatives
+
+If the user raises an unresolved choice, such as local versus web, compare
+credible alternatives explicitly once the relevant needs are understood and
+before asking for a selection. Do not settle it indirectly through agreement
+with a supporting detail such as hosted storage. Preserve an explicit selection
+already made; do not force an options exercise for every minor decision.
+
+Show a compact comparison in the conversation and retain it under Central
+alternatives and tradeoffs in SPEC.md. Compare fit to the user's pain point,
+constraints, and first release; meaningful benefits and limitations; recurring
+costs and operator work; and the infrastructure or additional scope each option
+introduces. For local versus web, consider installation, offline/cross-device use,
+data location, synchronization, hosting, authentication, and recovery where
+applicable. Derive requirements from the actual design, not assumptions that
+every web app or local app needs the same infrastructure.
+
+Recommend an option with reasoning and ask the user to choose, retaining the
+choice and rationale under its decision ID. If evidence is insufficient, state
+what remains unknown. Keep the choice Open or Proposed until answered; explicit
+deferral is valid. If no material alternatives remain, record that briefly
+rather than inventing options to fill the template.
+
+## Transition to a design proposal
+
+Once product direction is sufficient, explicitly transition to proposing the
+remaining technical and visual design. Present a coherent design for review;
+do not require the user to choose every folder, component, color, or variable.
+Challenge weak choices with reasoning, leaving unaccepted recommendations Proposed.
+Do not seek final stack agreement alongside unanswered requirements that could
+change it; revise affected recommendations when prerequisites change.
 
 Keep the design proportional to the agreed first release. Explicitly surface
-recommendations that introduce recurring costs, ongoing operator responsibilities,
-or substantial new subsystems. In the design review, explain their benefit,
-burden, and relevant simpler alternative; ask me to agree to consequential
-commitments instead of burying them in the written spec.
+recommendations introducing recurring costs, ongoing operator responsibilities,
+or substantial new subsystems. Explain benefit, burden, and a relevant simpler
+alternative; obtain agreement on consequential commitments rather than burying
+them in a long spec.
 
-Distinguish requirements for the first release from gates for a later stage
-such as real-data operation or public launch. Define which stage the first
-release serves. Do not silently turn later gates into MVP implementation work,
-or defer safeguards essential to the agreed first-release use. Mark unagreed
-costs, operational targets, retention policies, and subsystems as Proposed.
+Define the first release's intended use. Distinguish its requirements from later
+release gates, such as real-data operation or public launch. Do not silently make
+later gates MVP work or defer safeguards essential to the first release's use.
+Unagreed costs, targets, retention policies, and subsystems stay Proposed.
 
-Choose technology against the agreed data, access, and workflow requirements.
-Do not request final acceptance of a stack in the same round as unresolved
-requirements that could change that stack. If answers change prerequisites,
-revise the affected design before seeking agreement.
+Review all spec coverage and resolve material questions or record explicit
+deferrals and their impact. Confirm shared understanding before synthesizing the
+complete Draft. This confirmation is separate from accepting the written spec.
 
-Before shared-understanding confirmation, review coverage against every
-specification section. Resolve material open questions or let me explicitly
-defer them with their impact recorded. Do not claim discovery is complete
-just because the product questions stopped; technical and visual proposals
-also need review. Then synthesize the complete Draft for written acceptance.
+## Decision map
 
-## Design decisions and dependencies
+Keep a compact outline of material decisions and dependencies, not every question,
+repeated scope statement, or transcript. Use stable IDs such as D1 and D2, recording
+the question, prerequisites, outcome/options, brief rationale, and spec-section link.
+Use Agreed, Proposed, Open, and Deferred states. Explicitly accepted assumptions
+may be Agreed if their assumption and validation needs remain clear.
 
-Maintain a compact, user-visible decision map in SPEC.md. Record material
-choices and dependencies, not every interview question, repeated scope
-statement, transcript, or private reasoning trace. The substantive sections
-are the specification; the map is a navigation aid.
+Represent dependencies with indentation and additional prerequisite IDs instead
+of duplicated nodes. For incomplete drafts, retain the next interview frontier
+and research blockers. No separate graph file or exhaustive minor-choice log is
+required. Record outcomes, not private reasoning traces.
 
-- Assign stable IDs such as D1 and D2 to material decisions. Record each
-  decision's question, state, outcome or open options, and prerequisites.
-- Use states: Agreed, Proposed, Open, and Deferred. A recommendation stays
-  Proposed until I agree. Explicitly accepted assumptions may be recorded
-  as Agreed, with their assumption and validation needs made clear.
-- Show dependencies as an indented tree or outline. Where a decision has
-  multiple prerequisites, reference their IDs rather than duplicating it.
-- Link important outcomes to the specification section they inform. Keep
-  detailed requirements in those sections rather than copying them here.
-- For an incomplete draft, list the next frontier and any research blockers.
-  Keep the map proportional to the project; no separate graph file or
-  exhaustive record of minor choices is required.
+## Coverage and review
 
-## What the specification should cover
+SPEC.md describes product scope: what the system should do, its constraints,
+and release boundaries. A request such as "documentation only for this session"
+limits the current task, not the future product. Keep temporary authorization,
+file-edit limits, and session exclusions in the conversation or HANDOVER.md;
+do not copy them into product scope, non-goals, or acceptance criteria.
+A factual statement such as "application not yet implemented" is appropriate
+when it clarifies the current state without becoming a permanent prohibition.
 
-- Project name or explicitly provisional working title
-- Problem statement, intended users, current process, pain point/motivation,
-  and success criteria
-- Core user workflows
-- MVP scope, non-goals, and testable acceptance criteria
-- Design decisions and dependencies
-- Tech stack selection and reasoning
-- Data sources, APIs, and essential data models
-- Proposed project folder structure
-- Pages/screens, including ASCII wireframes
-- Key components and API contracts
-- UI/UX design system, including accessibility
-- Authentication, authorization, and data privacy where applicable
-- Environment variable names and purposes, without secret values
-- Deployment plan and operational requirements
-- Development phases with milestones and P0/P1/P2/P3 priorities
-- Constraints, known limitations, risks, and dependencies
-- Open questions and assumptions
+Use the template's sections as the coverage checklist: identity, goals/pain point,
+workflows, scope, central alternatives, consequential commitments, acceptance,
+decisions, stack, data/APIs/models, folder structure,
+screens/wireframes, components/contracts, visual system/accessibility, auth/privacy,
+environment variables, deployment/release gates, phases, feature plans, and risks.
+Adapt depth to complexity. Record variable names and purposes, never secret values.
+Define P0/P1/P2/P3 and use verifiable milestones.
 
-Adapt the depth to the project's complexity. Mark irrelevant sections
-as not applicable with a brief explanation.
+Before presenting a complete Draft, ensure each section has substantive content,
+an explicit unresolved item with impact and next action, or a justified
+not-applicable statement. Empty headings are not coverage. Check cross-references,
+consistency with decision states, and unresolved prerequisites. Distinguish an
+incomplete interview draft from a complete review draft; remove template comments.
 
-## Feature plans
+Keep Next interview frontier only while discovery is incomplete. When preparing
+the complete review draft, remove that heading and interview-only progress notes.
+Move any remaining deferred decisions or assumptions into Open questions and
+assumptions, preserving decision IDs, impact on accepted scope, and resolution
+or validation steps. If none remain, remove the frontier without creating a
+replacement section. Retain substantive decisions and unresolved release gates;
+cleanup must not imply they are settled. Check links to removed headings.
 
-Keep project-wide intent and high-level milestones in SPEC.md. A design-tree
-branch is a decision dependency, not automatically a feature or work item.
+### Consequential commitments before acceptance
 
-Identify complex features that would benefit from a separate execution
-plan, but do not create plan files merely because this interview uncovered
-them. Record them as suggested plans until feature planning is requested.
-Small, clear features need no separate plan.
+Maintain a short Consequential commitments summary in SPEC.md and show it in
+the conversation before requesting acceptance. Cover recurring costs, ongoing
+operator duties, major subsystems, and difficult-to-reverse choices. For each,
+state the concrete commitment and burden, whether it applies to the first release
+or a later release gate, its decision ID/status, and any unresolved choice.
+Link to details rather than duplicating them. State when no material commitments
+were identified; do not invent infrastructure to fill this section.
 
-When planning is requested, create or update docs/plans/<feature-name>.md
-for each selected complex feature. Include scope, acceptance criteria,
-relevant decision IDs, affected components, implementation milestones,
-verification, and rollout considerations. Link it from SPEC.md, preserve
-existing plans, and avoid duplicating project-wide requirements. Surface
-product-scope changes for review before treating them as agreed.
+Broad approval applies only to the consequential commitments actually surfaced.
+A consequential detail absent from this summary and not separately agreed stays
+Proposed; do not silently mark it Agreed after a general "yes." Group related
+low-impact choices for efficient review, but ask about unresolved consequential
+choices explicitly. Preserve prior explicit agreements without demanding them
+again. If the draft adds or changes a consequential commitment, refresh the
+summary and surface the change before requesting acceptance.
 
-## Deliverable and completion
+Present the written spec and this summary for explicit acceptance. Only then mark
+it Accepted for the agreed scope. If the user accepts limited scope with deferred
+items, make that boundary and outstanding proposals explicit. Neither interview
+confirmation nor written acceptance authorizes implementation.
 
-Write SPEC.md with Status: Draft. Clearly distinguish agreed decisions,
-proposals, assumptions, and unresolved questions. Do not invent requirements
-or present unanswered decisions as settled.
+## Feature plans and foundation handoff
 
-Make acceptance criteria observable and milestones verifiable. Define what
-P0/P1/P2/P3 mean for this project. Remove unused template instructions.
+Keep project-wide intent and high-level milestones in SPEC.md. Identify complex
+features that could benefit from execution plans, but create no plan files unless
+feature planning is requested. A decision-tree branch is not automatically a
+feature. State when no plans are selected; link only to existing files.
 
-Before presenting the complete draft, check that requirements agree with
-the decision map, cross-references resolve, and dependent decisions have no
-silently unresolved prerequisites. Every section must contain substantive
-content, an explicit unresolved item with its impact and next action, or a
-brief justified not-applicable statement. An empty heading is not coverage.
-Feature plans may state that none are selected or created. Identify remaining
-blockers and distinguish a partial interview draft from a complete review draft.
+Route requested feature planning through Cartographer's Phase 2 and the project's
+planning guide. Preserve existing plans and propose focused spec updates for
+product-scope changes instead of duplicating or silently superseding requirements.
 
-For a new project, defer creating or populating AGENTS.md until I accept the
-complete written SPEC.md, unless I explicitly request it earlier. Read and
-preserve existing agent instructions from the start; this sequencing does
-not require deleting existing AGENTS.md files.
+After new-project spec acceptance, use the agent workflow to seed the scaffolded
+AGENTS.md from the accepted direction and actual project state. Create it from
+the template first if it is still missing. Label planned components
+separately and do not invent development commands. Existing-project instruction
+updates do not require restarting discovery; explicit earlier requests remain valid.
 
-Present the written spec for review. Mark it Accepted only after I explicitly
-accept the written document. If I accept a limited scope despite deferred
-items, make that boundary and its limitations explicit.
-
-Confirmation of shared understanding permits drafting; acceptance of the
-written spec is a separate step. Neither authorizes implementation.
+Summarize agreed scope, document status, remaining uncertainties, and candidate
+first features. The foundation is ready for its accepted scope when goals,
+acceptance criteria, constraints, and a concrete next step are clear; other
+documentation may remain scaffolded when useful evidence does not exist yet.

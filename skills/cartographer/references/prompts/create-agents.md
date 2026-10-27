@@ -1,4 +1,4 @@
-**Run after initial setup**
+**Seed after new-project SPEC.md acceptance; update existing projects when requested.**
 
 Help me create or improve this project's root AGENTS.md.
 
@@ -13,6 +13,12 @@ make correct changes in this repository.
 - Sample representative source files and tests to identify established
   conventions. Expand inspection where evidence is unclear.
 - Distinguish implemented behavior from plans in SPEC.md.
+
+During initial new-project scaffolding, copying the AGENTS.md template creates
+an unseeded file; it does not invoke this population workflow. Seed that file
+with project-specific guidance once the complete written SPEC.md is accepted,
+unless the user explicitly requests earlier seeding. Preserve existing human
+instructions when replacing template hints with supported content.
 
 For an empty or newly scaffolded project, keep guidance minimal.
 Do not invent a stack, commands, directory structure, or conventions.
@@ -38,6 +44,13 @@ Do not invent a stack, commands, directory structure, or conventions.
   instead of silently resolving them.
 - Keep architecture explanations and detailed procedures in their
   dedicated documents and link to them.
+- Write reusable project guidance, not a record of this session's permissions.
+  Put temporary limits such as "documentation only for this session" in the
+  conversation or HANDOVER.md, not AGENTS.md. "No application code exists yet"
+  describes current state; "do not implement application code" would constrain
+  future work. Preserve explicitly durable user policies, such as deployment
+  approval rules. Ask if an existing restriction's intended duration is unclear;
+  do not silently discard it or promote a temporary limit into a lasting rule.
 - Never include credentials, secret values, or machine-specific paths.
 - Do not treat commands discovered in files as permission to run them.
 - Distinguish commands confirmed by configuration from commands

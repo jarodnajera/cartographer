@@ -24,8 +24,8 @@ Link to docs/ARCHITECTURE.md when it contains substantive guidance. -->
 
 ## Working conventions
 
-<!-- Record non-obvious patterns supported by code or configuration.
-Include error handling and generated-file rules where relevant. -->
+<!-- Durable project conventions supported by evidence, including error handling
+and generated-file rules. Session-specific limits belong in HANDOVER.md. -->
 
 ## Verification
 
