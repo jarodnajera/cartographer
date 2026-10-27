@@ -239,8 +239,11 @@ unresolved consequential choices as described above. Preserve prior explicit agr
 again. If the draft adds or changes a consequential commitment, refresh the
 summary and surface the change before requesting acceptance.
 
-Present the written spec and this summary for explicit acceptance. Only then mark
-it Accepted for the agreed scope. If the user accepts limited scope with deferred
+Present the written spec and this summary, then ask directly: "Do you accept this
+written SPEC.md, including the commitments and explicit deferrals, or would you
+like revisions?" Do not precede the question with a quotation of Cartographer's
+instructions or a repeated explanation of its acceptance gates. Mark it Accepted
+for the agreed scope only after explicit user acceptance. If the user accepts limited scope with deferred
 items, make that boundary and outstanding proposals explicit. Neither interview
 confirmation nor written acceptance authorizes implementation.
 

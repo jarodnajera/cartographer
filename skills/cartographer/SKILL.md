@@ -29,6 +29,15 @@ placeholders are not user answers.
 | Configure project hooks | [Optional hooks workflow](references/prompts/create-hooks.md) |
 | Seed memory | [Optional memory workflow](references/prompts/seed-memory.md) |
 
+## Communication
+
+Keep updates focused on findings, decisions, meaningful changes, and the next
+useful step. Acknowledge session constraints when needed, then follow them without
+repeated compliance announcements. Revisit them only if scope changes or a relevant
+limitation needs explanation. Do not narrate or quote internal workflow rules to
+justify routine interview or acceptance questions; ask directly. Explain a rule
+when the user asks or when it materially affects what can happen next.
+
 ## Establish context
 
 Identify the target project separately from Cartographer's source; ask if
