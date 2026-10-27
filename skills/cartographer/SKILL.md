@@ -60,8 +60,9 @@ interview scope, decision tracking, design review, and completion. Use this orde
 2. Clarify intent through the bundled grilling procedure and record findings.
 3. Propose the remaining design and confirm shared understanding.
 4. Synthesize the complete Draft SPEC.md and obtain written-spec acceptance.
-5. Seed the scaffolded AGENTS.md using the agent workflow, following the spec
-   workflow's timing and exceptions.
+5. For a project with application files/tooling, seed AGENTS.md using the agent
+   workflow. Otherwise provide the spec workflow's framework-setup handoff,
+   retaining AGENTS.md as a template until application setup is complete.
 6. Summarize the foundation, remaining gaps, and candidate next features.
 
 For scaffold-only or focused documentation requests, perform only the relevant

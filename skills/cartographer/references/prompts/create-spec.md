@@ -29,10 +29,10 @@ COMPENDIUM.md; docs/plans/PLANS.md and its .gitkeep; docs/adr/ and docs/research
 with .gitkeep. Exclude optional profiles, memory, and hook configuration.
 
 For a new project, create a missing AGENTS.md from its bundled template during
-scaffolding, leaving it unseeded. Seed it with project-specific guidance after
-acceptance of the complete written SPEC.md, unless the user explicitly requests
-earlier seeding. Creating the template is not the same as populating it.
-Always read and preserve existing agent instructions.
+documentation scaffolding, leaving it unseeded. Seed it after the framework or
+application skeleton has actually been set up, not merely after spec acceptance.
+Creating the template is not the same as populating it. Always read and preserve
+existing agent instructions.
 
 Create files exclusively; preserve existing files, including empty ones. Report
 symlink or incompatible-path conflicts instead of overwriting. When population
@@ -47,6 +47,29 @@ questions whose prerequisites are settled, wait for answers, and recompute the
 frontier after each round. Research discoverable facts directly; use sub-agents
 only when available and permitted. Reopen dependent decisions when an answer
 changes a prerequisite. Recommendations are not user decisions.
+
+For consequential choices—product scope, architecture, recurring costs, operator
+duties, or difficult-to-reverse commitments—ask the user to select explicitly
+labeled options with meaningful tradeoffs. Give the recommended option and its
+reason, but phrase the question as "Which option do you choose?" rather than
+"Shall we use my recommendation?" Do not manufacture alternatives or reopen
+explicit decisions already made. Allow a different proposal or explicit deferral.
+
+For these choices, this selection format overrides grilling's instruction to
+word questions so "yes" accepts the recommendation. Retain its numbered rounds,
+separate recommendation, and decision dependencies; no fixed question cap is added.
+A clear free-text selection is valid. An ambiguous "yes" to multiple options or
+unresolved commitments does not select the recommended option: clarify the choice
+and keep it Open or Proposed until the answer is unambiguous. Low-impact design
+review and acceptance of the completed written spec may still use confirmation.
+
+Example:
+
+> ❓ Q1 — First release: A) Private pilot with invited users and limited support,
+> or B) Public beta requiring public signup, abuse controls, and support readiness?
+> Which do you choose? You may propose a different boundary or defer.
+>
+> ➡️ I recommend A to validate the core workflow before taking on public operations.
 
 Early in discovery, cover:
 
@@ -96,12 +119,22 @@ rather than inventing options to fill the template.
 
 ## Transition to a design proposal
 
-Once product direction is sufficient, explicitly transition to proposing the
-remaining technical and visual design. Present a coherent design for review;
-do not require the user to choose every folder, component, color, or variable.
-Challenge weak choices with reasoning, leaving unaccepted recommendations Proposed.
-Do not seek final stack agreement alongside unanswered requirements that could
-change it; revise affected recommendations when prerequisites change.
+Once product direction is sufficient, explain that there is enough context to
+propose the remaining technical and visual design. This advances the grilling
+interview; it does not end it or establish shared understanding by itself.
+
+Treat material choices introduced by the proposal as new nodes in the same
+decision tree. Mark them Proposed, identify their prerequisites, and continue
+dependency-aware review rounds using explicit options for consequential choices.
+Answers may unblock further questions or require design revisions; update the
+tree and affected spec sections accordingly. Do not mark a proposal Agreed merely
+because the product-discovery questions are finished.
+
+Present a coherent design without asking the user to choose every folder,
+component, color, or variable. Label low-impact details as changeable defaults
+or feature-plan work under the depth guidance below. Challenge weak choices with
+reasoning. Do not seek final stack agreement alongside unanswered requirements
+that could change it; revise affected recommendations when prerequisites change.
 
 Keep the design proportional to the agreed first release. Explicitly surface
 recommendations introducing recurring costs, ongoing operator responsibilities,
@@ -114,9 +147,33 @@ release gates, such as real-data operation or public launch. Do not silently mak
 later gates MVP work or defer safeguards essential to the first release's use.
 Unagreed costs, targets, retention policies, and subsystems stay Proposed.
 
-Review all spec coverage and resolve material questions or record explicit
-deferrals and their impact. Confirm shared understanding before synthesizing the
-complete Draft. This confirmation is separate from accepting the written spec.
+Finish the interview only after reviewing all spec coverage, including decisions
+introduced by design proposals. Resolve material questions or record user-approved
+deferrals with their impact and dependent work still unresolved. A scoped deferral
+does not mean every branch is settled. Summarize the resulting agreements and
+remaining boundaries for shared-understanding confirmation, then synthesize the
+complete Draft. Acceptance of the written spec remains a separate step.
+
+## Calibrate depth
+
+Read the [compact example spec](../examples/compact-spec.md) before drafting to
+calibrate detail, not to copy its scope, stack, decisions, or Accepted status.
+For each detail, ask: "Would a different choice cause costly rework or change an
+agreed outcome?" Settle those choices with the user; otherwise use a short
+changeable default or defer the detail to the selected feature's plan.
+
+Distinguish **requirements** (agreed product behavior, constraints, and costly
+choices), **changeable defaults** (low-cost implementation choices the implementer
+may revise), and **feature-plan work** (detail needed only for a selected feature).
+Accepting the spec does not make every default mandatory. Default changes must
+still respect requirements and consequential commitments; unknown requirements
+remain Open or Proposed rather than being disguised as implementation freedom.
+
+Keep scope, acceptance, stack commitments, essential data/ownership, and access
+boundaries concrete. Give folder layouts, visual tokens, and incidental component
+details only the depth their consequences warrant. Keep later features brief.
+The template is a coverage checklist, not a minimum word count: one useful line
+or an explicit feature-plan deferral can cover a low-impact section.
 
 ## Decision map
 
@@ -150,8 +207,9 @@ Adapt depth to complexity. Record variable names and purposes, never secret valu
 Define P0/P1/P2/P3 and use verifiable milestones.
 
 Before presenting a complete Draft, ensure each section has substantive content,
-an explicit unresolved item with impact and next action, or a justified
-not-applicable statement. Empty headings are not coverage. Check cross-references,
+an explicit unresolved item with impact and next action, a clearly bounded
+feature-plan deferral, or a justified not-applicable statement. Empty headings
+are not coverage. Check cross-references,
 consistency with decision states, and unresolved prerequisites. Distinguish an
 incomplete interview draft from a complete review draft; remove template comments.
 
@@ -176,8 +234,8 @@ were identified; do not invent infrastructure to fill this section.
 Broad approval applies only to the consequential commitments actually surfaced.
 A consequential detail absent from this summary and not separately agreed stays
 Proposed; do not silently mark it Agreed after a general "yes." Group related
-low-impact choices for efficient review, but ask about unresolved consequential
-choices explicitly. Preserve prior explicit agreements without demanding them
+low-impact choices for efficient review, but use explicit option selection for
+unresolved consequential choices as described above. Preserve prior explicit agreements without demanding them
 again. If the draft adds or changes a consequential commitment, refresh the
 summary and surface the change before requesting acceptance.
 
@@ -197,11 +255,33 @@ Route requested feature planning through Cartographer's Phase 2 and the project'
 planning guide. Preserve existing plans and propose focused spec updates for
 product-scope changes instead of duplicating or silently superseding requirements.
 
-After new-project spec acceptance, use the agent workflow to seed the scaffolded
-AGENTS.md from the accepted direction and actual project state. Create it from
-the template first if it is still missing. Label planned components
-separately and do not invent development commands. Existing-project instruction
-updates do not require restarting discovery; explicit earlier requests remain valid.
+After spec acceptance, inspect whether application files and tooling exist.
+For a new documentation-only project, leave the scaffolded AGENTS.md unseeded and
+end Phase 1 with a short setup note:
+
+1. Show the scaffold command for the accepted stack, its working directory and
+   relevant options. Verify it against current official framework documentation
+   through the research workflow, citing the source. If a material setup choice
+   remains open, explain it rather than inventing a runnable command.
+2. Offer to run the command. Execute it only after an explicit setup request or
+   affirmative response to that offer; spec acceptance is not that response.
+   Honor setup authorization already given without requesting it again.
+3. Give the exact return instruction: "After application setup, ask Cartographer:
+   'Seed AGENTS.md from the scaffolded project.'" Include this next step and
+   the verified setup guidance in HANDOVER.md so another session can resume.
+
+Account for the existing documentation in the target directory: do not recommend
+force/overwrite flags or assume the scaffolder accepts a nonempty directory.
+When needed, describe generation in an empty staging directory and a reviewed
+merge preserving the documents. For stacks without a framework generator,
+provide a minimal setup approach and state that no scaffold command applies.
+
+Once setup has actually completed, run the agent workflow when requested or as
+part of an explicitly authorized setup-and-seeding task. Seed AGENTS.md from
+observed files, manifests, scripts, and conventions, separating planned behavior
+from implemented facts. If setup failed or is partial, report that state rather
+than inventing commands or claiming readiness. Existing projects with a codebase
+can use the agent workflow directly without a new framework-setup step.
 
 Summarize agreed scope, document status, remaining uncertainties, and candidate
 first features. The foundation is ready for its accepted scope when goals,

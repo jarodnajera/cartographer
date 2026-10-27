@@ -2,6 +2,8 @@
 
 Status: Draft template — requirements undecided.
 
+<!-- Label content as requirements, changeable defaults, or feature-plan work. -->
+
 ## Project name
 
 <!-- Confirmed name or explicitly provisional working title. -->
@@ -57,7 +59,7 @@ brief rationale, and relevant section. States: Agreed, Proposed, Open, Deferred.
 
 ## Project folder structure
 
-<!-- Planned layout, distinguished from existing files. -->
+<!-- Essential layout constraints or a changeable default; distinguish existing files. -->
 
 ## Pages and screens
 
@@ -65,11 +67,11 @@ brief rationale, and relevant section. States: Agreed, Proposed, Open, Deferred.
 
 ## Components and API contracts
 
-<!-- Responsibilities, boundaries, inputs/outputs, and important errors. -->
+<!-- Essential boundaries/contracts; defer feature-specific internals to its plan. -->
 
 ## UI/UX design system
 
-<!-- Colors, typography, component style, and accessibility requirements. -->
+<!-- Required accessibility/brand constraints; label incidental visual choices as defaults. -->
 
 ## Authentication, authorization, and data privacy
 

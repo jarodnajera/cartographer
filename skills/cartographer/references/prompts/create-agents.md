@@ -1,4 +1,4 @@
-**Seed after new-project SPEC.md acceptance; update existing projects when requested.**
+**Seed after framework/application setup; update existing projects when requested.**
 
 Help me create or improve this project's root AGENTS.md.
 
@@ -14,13 +14,15 @@ make correct changes in this repository.
   conventions. Expand inspection where evidence is unclear.
 - Distinguish implemented behavior from plans in SPEC.md.
 
-During initial new-project scaffolding, copying the AGENTS.md template creates
-an unseeded file; it does not invoke this population workflow. Seed that file
-with project-specific guidance once the complete written SPEC.md is accepted,
-unless the user explicitly requests earlier seeding. Preserve existing human
-instructions when replacing template hints with supported content.
+Initial documentation scaffolding creates AGENTS.md from its template without
+seeding it. For a new project, populate it after the framework/application
+skeleton exists so paths, scripts, and conventions come from actual files.
+If the project is still documentation-only, keep the template unseeded and
+return the spec workflow's setup guidance rather than generating speculative
+conventions. This workflow does not itself authorize running a scaffolder.
 
-For an empty or newly scaffolded project, keep guidance minimal.
+For an existing codebase, inspect and populate guidance directly when requested.
+Preserve human instructions when replacing template hints with supported content.
 Do not invent a stack, commands, directory structure, or conventions.
 
 ## Include where supported by evidence
