@@ -1,0 +1,2060 @@
+[
+  {
+    "code": "ADP",
+    "name": "Andorran Peseta",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AED",
+    "name": "UAE Dirham",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "AFA",
+    "name": "Afghani",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AFN",
+    "name": "Afghani",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ALK",
+    "name": "Old Lek",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ALL",
+    "name": "Lek",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "AMD",
+    "name": "Armenian Dram",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ANG",
+    "name": "Netherlands Antillean Guilder",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AOA",
+    "name": "Kwanza",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "AOK",
+    "name": "Kwanza",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AON",
+    "name": "New Kwanza",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AOR",
+    "name": "Kwanza Reajustado",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ARA",
+    "name": "Austral",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ARP",
+    "name": "Peso Argentino",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ARS",
+    "name": "Argentine Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ARY",
+    "name": "Peso",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ATS",
+    "name": "Schilling",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "AWG",
+    "name": "Aruban Florin",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "AYM",
+    "name": "Azerbaijan Manat",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AZM",
+    "name": "Azerbaijanian Manat",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "AZN",
+    "name": "Azerbaijan Manat",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BAD",
+    "name": "Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BAM",
+    "name": "Convertible Mark",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BBD",
+    "name": "Barbados Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BDT",
+    "name": "Taka",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BEC",
+    "name": "Convertible Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BEF",
+    "name": "Belgian Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BEL",
+    "name": "Financial Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BGJ",
+    "name": "Lev A/52",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BGK",
+    "name": "Lev A/62",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BGL",
+    "name": "Lev",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BGN",
+    "name": "Bulgarian Lev",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BHD",
+    "name": "Bahraini Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BIF",
+    "name": "Burundi Franc",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BMD",
+    "name": "Bermudian Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BND",
+    "name": "Brunei Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BOB",
+    "name": "Boliviano",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BOP",
+    "name": "Peso boliviano",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BOV",
+    "name": "Mvdol",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BRB",
+    "name": "Cruzeiro",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BRC",
+    "name": "Cruzado",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BRE",
+    "name": "Cruzeiro",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BRN",
+    "name": "New Cruzado",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BRR",
+    "name": "Cruzeiro Real",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BSD",
+    "name": "Bahamian Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BTN",
+    "name": "Ngultrum",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BUK",
+    "name": "Kyat",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BWP",
+    "name": "Pula",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BYB",
+    "name": "Belarusian Ruble",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BYN",
+    "name": "Belarusian Ruble",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "BYR",
+    "name": "Belarusian Ruble",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "BZD",
+    "name": "Belize Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CDF",
+    "name": "Congolese Franc",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CHC",
+    "name": "WIR Franc (for electronic)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CHE",
+    "name": "WIR Euro",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CHF",
+    "name": "Swiss Franc",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CHW",
+    "name": "WIR Franc",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CLF",
+    "name": "Unidad de Fomento",
+    "digits": 4,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CLP",
+    "name": "Chilean Peso",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CNY",
+    "name": "Yuan Renminbi",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "COP",
+    "name": "Colombian Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "COU",
+    "name": "Unidad de Valor Real",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CRC",
+    "name": "Costa Rican Colon",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CSD",
+    "name": "Serbian Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CSJ",
+    "name": "Krona A/53",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CSK",
+    "name": "Koruna",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CUC",
+    "name": "Peso Convertible",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CUP",
+    "name": "Cuban Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CVE",
+    "name": "Cabo Verde Escudo",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "CYP",
+    "name": "Cyprus Pound",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "CZK",
+    "name": "Czech Koruna",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "DDM",
+    "name": "Mark der DDR",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "DEM",
+    "name": "Deutsche Mark",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "DJF",
+    "name": "Djibouti Franc",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "DKK",
+    "name": "Danish Krone",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "DOP",
+    "name": "Dominican Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "DZD",
+    "name": "Algerian Dinar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ECS",
+    "name": "Sucre",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ECV",
+    "name": "Unidad de Valor Constante (UVC)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "EEK",
+    "name": "Kroon",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "EGP",
+    "name": "Egyptian Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ERN",
+    "name": "Nakfa",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ESA",
+    "name": "Spanish Peseta",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ESB",
+    "name": "\"A\" Account (convertible Peseta Account)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ESP",
+    "name": "Spanish Peseta",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ETB",
+    "name": "Ethiopian Birr",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "FIM",
+    "name": "Markka",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "FJD",
+    "name": "Fiji Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "FKP",
+    "name": "Falkland Islands Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "FRF",
+    "name": "French Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GBP",
+    "name": "Pound Sterling",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GEK",
+    "name": "Georgian Coupon",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GEL",
+    "name": "Lari",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GHC",
+    "name": "Cedi",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GHP",
+    "name": "Ghana Cedi",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GHS",
+    "name": "Ghana Cedi",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GIP",
+    "name": "Gibraltar Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GMD",
+    "name": "Dalasi",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GNE",
+    "name": "Syli",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GNF",
+    "name": "Guinean Franc",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GNS",
+    "name": "Syli",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GQE",
+    "name": "Ekwele",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GRD",
+    "name": "Drachma",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GTQ",
+    "name": "Quetzal",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "GWE",
+    "name": "Guinea Escudo",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GWP",
+    "name": "Guinea-Bissau Peso",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "GYD",
+    "name": "Guyana Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "HKD",
+    "name": "Hong Kong Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "HNL",
+    "name": "Lempira",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "HRD",
+    "name": "Croatian Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "HRK",
+    "name": "Croatian Kuna",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "HTG",
+    "name": "Gourde",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "HUF",
+    "name": "Forint",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "IDR",
+    "name": "Rupiah",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "IEP",
+    "name": "Irish Pound",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ILP",
+    "name": "Pound",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ILR",
+    "name": "Old Shekel",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ILS",
+    "name": "New Israeli Sheqel",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "IQD",
+    "name": "Iraqi Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "IRR",
+    "name": "Iranian Rial",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ISJ",
+    "name": "Old Krona",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ISK",
+    "name": "Iceland Krona",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ITL",
+    "name": "Italian Lira",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "JMD",
+    "name": "Jamaican Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "JOD",
+    "name": "Jordanian Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "JPY",
+    "name": "Yen",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KES",
+    "name": "Kenyan Shilling",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KGS",
+    "name": "Som",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KHR",
+    "name": "Riel",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KMF",
+    "name": "Comorian Franc ",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KPW",
+    "name": "North Korean Won",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KRW",
+    "name": "Won",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KWD",
+    "name": "Kuwaiti Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KYD",
+    "name": "Cayman Islands Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "KZT",
+    "name": "Tenge",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LAJ",
+    "name": "Pathet Lao Kip",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LAK",
+    "name": "Lao Kip",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LBP",
+    "name": "Lebanese Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LKR",
+    "name": "Sri Lanka Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LRD",
+    "name": "Liberian Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LSL",
+    "name": "Loti",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "LSM",
+    "name": "Loti",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LTL",
+    "name": "Lithuanian Litas",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LTT",
+    "name": "Talonas",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LUC",
+    "name": "Luxembourg Convertible Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LUF",
+    "name": "Luxembourg Franc",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LUL",
+    "name": "Luxembourg Financial Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LVL",
+    "name": "Latvian Lats",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LVR",
+    "name": "Latvian Ruble",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "LYD",
+    "name": "Libyan Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MAD",
+    "name": "Moroccan Dirham",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MDL",
+    "name": "Moldovan Leu",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MGA",
+    "name": "Malagasy Ariary",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MGF",
+    "name": "Malagasy Franc",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MKD",
+    "name": "Denar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MLF",
+    "name": "Mali Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MMK",
+    "name": "Kyat",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MNT",
+    "name": "Tugrik",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MOP",
+    "name": "Pataca",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MRO",
+    "name": "Ouguiya",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MRU",
+    "name": "Ouguiya",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MTL",
+    "name": "Maltese Lira",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MTP",
+    "name": "Maltese Pound",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MUR",
+    "name": "Mauritius Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MVQ",
+    "name": "Maldive Rupee",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MVR",
+    "name": "Rufiyaa",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MWK",
+    "name": "Malawi Kwacha",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexican Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MXP",
+    "name": "Mexican Peso",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MXV",
+    "name": "Mexican Unidad de Inversion (UDI)",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MYR",
+    "name": "Malaysian Ringgit",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "MZE",
+    "name": "Mozambique Escudo",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MZM",
+    "name": "Mozambique Metical",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "MZN",
+    "name": "Mozambique Metical",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NAD",
+    "name": "Namibia Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NGN",
+    "name": "Naira",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NIC",
+    "name": "Cordoba",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "NIO",
+    "name": "Cordoba Oro",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NLG",
+    "name": "Netherlands Guilder",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "NOK",
+    "name": "Norwegian Krone",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NPR",
+    "name": "Nepalese Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "NZD",
+    "name": "New Zealand Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "OMR",
+    "name": "Rial Omani",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PAB",
+    "name": "Balboa",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PEH",
+    "name": "Sol",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "PEI",
+    "name": "Inti",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "PEN",
+    "name": "Sol",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PES",
+    "name": "Sol",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "PGK",
+    "name": "Kina",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PHP",
+    "name": "Philippine Peso",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PKR",
+    "name": "Pakistan Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PLN",
+    "name": "Zloty",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "PLZ",
+    "name": "Zloty",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "PTE",
+    "name": "Portuguese Escudo",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "PYG",
+    "name": "Guarani",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "QAR",
+    "name": "Qatari Rial",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "RHD",
+    "name": "Rhodesian Dollar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ROK",
+    "name": "Leu A/52",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ROL",
+    "name": "Old Leu",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "RON",
+    "name": "Romanian Leu",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "RSD",
+    "name": "Serbian Dinar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "RUR",
+    "name": "Russian Ruble",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "RWF",
+    "name": "Rwanda Franc",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SAR",
+    "name": "Saudi Riyal",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SBD",
+    "name": "Solomon Islands Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SCR",
+    "name": "Seychelles Rupee",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SDD",
+    "name": "Sudanese Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SDG",
+    "name": "Sudanese Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SDP",
+    "name": "Sudanese Pound",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SEK",
+    "name": "Swedish Krona",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SGD",
+    "name": "Singapore Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SHP",
+    "name": "Saint Helena Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SIT",
+    "name": "Tolar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SKK",
+    "name": "Slovak Koruna",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SLE",
+    "name": "Leone",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SLL",
+    "name": "Leone",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SOS",
+    "name": "Somali Shilling",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SRD",
+    "name": "Surinam Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SRG",
+    "name": "Surinam Guilder",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SSP",
+    "name": "South Sudanese Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "STD",
+    "name": "Dobra",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "STN",
+    "name": "Dobra",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SUR",
+    "name": "Rouble",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "SVC",
+    "name": "El Salvador Colon",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SYP",
+    "name": "Syrian Pound",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "SZL",
+    "name": "Lilangeni",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "THB",
+    "name": "Baht",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TJR",
+    "name": "Tajik Ruble",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "TJS",
+    "name": "Somoni",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TMM",
+    "name": "Turkmenistan Manat",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "TMT",
+    "name": "Turkmenistan New Manat",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TND",
+    "name": "Tunisian Dinar",
+    "digits": 3,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TOP",
+    "name": "Pa’anga",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TPE",
+    "name": "Timor Escudo",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "TRL",
+    "name": "Old Turkish Lira",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "TRY",
+    "name": "Turkish Lira",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TTD",
+    "name": "Trinidad and Tobago Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TWD",
+    "name": "New Taiwan Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "TZS",
+    "name": "Tanzanian Shilling",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "UAH",
+    "name": "Hryvnia",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "UAK",
+    "name": "Karbovanet",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UGS",
+    "name": "Uganda Shilling",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UGW",
+    "name": "Old Shilling",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UGX",
+    "name": "Uganda Shilling",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "USD",
+    "name": "US Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "USN",
+    "name": "US Dollar (Next day)",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "USS",
+    "name": "US Dollar (Same day)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UYI",
+    "name": "Uruguay Peso en Unidades Indexadas (UI)",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "UYN",
+    "name": "Old Uruguay Peso",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UYP",
+    "name": "Uruguayan Peso",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "UYU",
+    "name": "Peso Uruguayo",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "UYW",
+    "name": "Unidad Previsional",
+    "digits": 4,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "UZS",
+    "name": "Uzbekistan Sum",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "VEB",
+    "name": "Bolivar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "VED",
+    "name": "Bolívar Soberano",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "VEF",
+    "name": "Bolivar Fuerte",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "VES",
+    "name": "Bolívar Soberano",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "VNC",
+    "name": "Old Dong",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "VND",
+    "name": "Dong",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "VUV",
+    "name": "Vatu",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "WST",
+    "name": "Tala",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XAD",
+    "name": "Arab Accounting Dinar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XAF",
+    "name": "CFA Franc BEAC",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XCD",
+    "name": "East Caribbean Dollar",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XCG",
+    "name": "Caribbean Guilder",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XEU",
+    "name": "European Currency Unit (E.C.U)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "XFO",
+    "name": "Gold-Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "XFU",
+    "name": "UIC-Franc",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "XOF",
+    "name": "CFA Franc BCEAO",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XPF",
+    "name": "CFP Franc",
+    "digits": 0,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "XRE",
+    "name": "RINET Funds Code",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "YDD",
+    "name": "Yemeni Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "YER",
+    "name": "Yemeni Rial",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "YUD",
+    "name": "New Yugoslavian Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "YUM",
+    "name": "New Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "YUN",
+    "name": "Yugoslavian Dinar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZAL",
+    "name": "Financial Rand",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZAR",
+    "name": "Rand",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ZMK",
+    "name": "Zambian Kwacha",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZMW",
+    "name": "Zambian Kwacha",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ZRN",
+    "name": "New Zaire",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZRZ",
+    "name": "Zaire",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZWC",
+    "name": "Rhodesian Dollar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZWD",
+    "name": "Zimbabwe Dollar (old)",
+    "digits": 0,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZWG",
+    "name": "Zimbabwe Gold",
+    "digits": 2,
+    "historical": false,
+    "precisionSource": "SIX"
+  },
+  {
+    "code": "ZWL",
+    "name": "Zimbabwe Dollar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZWN",
+    "name": "Zimbabwe Dollar (new)",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  },
+  {
+    "code": "ZWR",
+    "name": "Zimbabwe Dollar",
+    "digits": 2,
+    "historical": true,
+    "precisionSource": "CLDR"
+  }
+]

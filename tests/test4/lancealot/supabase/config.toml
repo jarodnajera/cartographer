@@ -1,0 +1,8 @@
+project_id = "lancealot"
+
+# Handlers explicitly authenticate: worker secret for jobs; verified JWT AND password for deletion.
+[functions.process-jobs]
+verify_jwt = false
+
+[functions.delete-account]
+verify_jwt = false
