@@ -25,7 +25,7 @@ configuration conventions and limitations. Its template placeholders were remove
 Supabase, Router, auth, records, reminders, export/deletion, automated tests/lint and
 CI are not configured. The spec's original folder inventory predates this starter;
 its architecture describes intended product behavior. Supporting architecture,
-testing, runbook and compendium files remain scaffolds. No feature plan exists.
+testing, runbook and glossary files remain scaffolds. No feature plan exists.
 The earlier setup instructions/research are historical guidance, not evidence of
 how this externally created starter was generated. Do not regenerate it.
 

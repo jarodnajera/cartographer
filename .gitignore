@@ -1,1 +1,11 @@
 .DS_Store
+
+# Local credentials; keep blank/example configuration publishable.
+.env
+.env.*
+!.env.example
+
+# Test4 companion skills are local installations, not vendored source.
+/tests/test4/.agents/
+/tests/test4/.claude/
+/tests/test4/.codex/

@@ -16,7 +16,7 @@ Work relative to this project directory, separate from Cartographer's skill sour
 - [HANDOVER.md](HANDOVER.md): current progress, authorization context, verification evidence, and next steps.
 - [docs/plans/PLANS.md](docs/plans/PLANS.md): feature-planning conventions; no individual feature plans are selected.
 - [docs/research/vue-supabase-fit.md](docs/research/vue-supabase-fit.md): current stack research, sources, and unresolved provider details. The older framework-fit.md is superseded for stack selection.
-- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md, and docs/COMPENDIUM.md remain scaffolds. docs/adr/ has no decisions recorded yet. Do not treat placeholders as established architecture, procedures, or test results.
+- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md, and docs/GLOSSARY.md remain scaffolds. docs/adr/ has no decisions recorded yet. Do not treat placeholders as established architecture, procedures, or test results.
 
 No setup, development, build, lint, type-check, test, or deployment commands are established. Inspect actual manifests/configuration when these are introduced; do not invent commands or claim verification without running it.
 

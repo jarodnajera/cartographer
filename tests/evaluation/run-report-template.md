@@ -9,6 +9,8 @@ Status: Not run — report template.
 - Cartographer revision/commit and uncommitted changes:
 - Client, model, reasoning setting, and versions:
 - Installation method and instruction sources:
+- Resolved external grilling identifier, package version/source revision (or
+  unknown), and evidence its actual instructions were loaded:
 - Tools, permissions, and memory state:
 - Target started empty and outside the skill repository:
 - Research date and external-source changes/confounders:
@@ -30,6 +32,7 @@ or artifact paths and sections. Do not prefill outcomes from the expected behavi
 
 | Criterion | Result | Evidence and explanation |
 | --- | --- | --- |
+| Loads installed Matt Pocock grilling; if missing, provides installation guidance without claiming a grilling session | | |
 | Asks for name and concrete pain point in the initial discovery round | | |
 | Explicitly compares local/web tradeoffs and added infrastructure before selection | | |
 | Uses explicit choices for consequential commitments without treating ambiguous yes as selection | | |
@@ -39,6 +42,8 @@ or artifact paths and sections. Do not prefill outcomes from the expected behavi
 | Preserves operational deferrals and first-release/public-beta boundaries | | |
 | Covers required spec areas while separating requirements, defaults, and feature-plan work | | |
 | Keeps temporary session permissions out of SPEC.md and durable AGENTS.md guidance | | |
+| Seeds domain-only GLOSSARY.md after spec acceptance and before setup handoff; lists terms for correction without a separate approval step | | |
+| Omits speculative _In code_ mappings when no implementation exists | | |
 | Creates AGENTS.md as a template and leaves it unseeded through the documentation-only handoff | | |
 | Provides verified setup guidance, an offer to run it, and the exact post-setup seeding instruction in HANDOVER.md | | |
 | Removes interview-only material from the completed spec | | |

@@ -15,17 +15,38 @@ requirements and distinguish implemented behavior from proposals. Resolve these
 bundled links relative to this prompt, not the target project:
 
 - [SPEC template](../../assets/templates/SPEC.md)
-- [Grilling instructions](../grilling/SKILL.md)
+- [Glossary template](../../assets/templates/docs/GLOSSARY.md)
 - [Documentation templates](../../assets/templates/)
 
-Read the actual grilling instructions before interviewing. If unavailable, locate
-an installed grilling skill; if neither is accessible, disclose the missing
-resource and offer to restore it or conduct a direct interview without claiming
-the skill was loaded.
+### Required installed skill: grilling
+
+Before interviewing, locate Matt Pocock's installed `grilling` through the client's
+skill catalog or supported discovery mechanism, including its plugin namespace
+where applicable. Confirm its mattpocock/skills source. Load its actual installed
+SKILL.md using the client's skill tool or read the resolved file directly; naming
+a skill, finding an installation record, or linking GitHub is not loading it.
+Use the installed instructions, not the former Cartographer references/grilling/
+copy. Resolve ambiguous duplicate installations before selecting one. Record the
+available package version/source revision for evaluation, or mark it unknown.
+
+If absent, disabled, or unreadable, explain the required dependency and provide
+the relevant installation steps from [dependency guidance](../dependencies.md).
+Pause dependent interview work until it is accessible; do not silently improvise
+grilling or install software without a request. Independent inspection and
+requested scaffolding can proceed. Rediscover and actually load the installed
+skill before resuming after installation.
+
+For Cartographer integration, this workflow's specific adaptations take precedence
+where they differ from installed grilling: explicit options for consequential
+choices; direct research when delegation is unavailable or not permitted; scoped
+design review and explicit deferrals; and Cartographer's document outputs and
+acceptance sequence. Higher-priority instructions and user scope still apply.
+Follow upstream elsewhere; surface materially incompatible upstream changes
+instead of silently discarding their instructions.
 
 When scaffolding is requested, copy missing templates into the target project:
 SPEC.md, AGENTS.md, and HANDOVER.md; docs/ARCHITECTURE.md, TESTING.md, RUNBOOK.md,
-COMPENDIUM.md; docs/plans/PLANS.md and its .gitkeep; docs/adr/ and docs/research/
+GLOSSARY.md; docs/plans/PLANS.md and its .gitkeep; docs/adr/ and docs/research/
 with .gitkeep. Exclude optional profiles, memory, and hook configuration.
 
 For a new project, create a missing AGENTS.md from its bundled template during
@@ -88,6 +109,11 @@ screens/design, and delivery. These are coverage areas, not artificial
 prerequisites or a fixed question count. Ask follow-ups when they materially
 affect scope, feasibility, experience, cost, or risk; suggest later scope for
 tangents and let the user decide.
+
+When the user or draft uses competing words for one concept (for example, "late"
+and "overdue"), or one word for two concepts, settle the term in the next eligible
+round. Do this only where wording affects behavior or UI; do not silently choose
+a meaning while later seeding the glossary.
 
 After each round, populate the substantive spec sections with confirmed findings
 and labeled proposals. The decision map indexes those sections rather than
@@ -210,7 +236,9 @@ Before presenting a complete Draft, ensure each section has substantive content,
 an explicit unresolved item with impact and next action, a clearly bounded
 feature-plan deferral, or a justified not-applicable statement. Empty headings
 are not coverage. Check cross-references,
-consistency with decision states, and unresolved prerequisites. Distinguish an
+consistency with decision states, and unresolved prerequisites. Use one term per
+concept throughout SPEC.md and distinguish different meanings explicitly.
+Distinguish an
 incomplete interview draft from a complete review draft; remove template comments.
 
 Keep Next interview frontier only while discovery is incomplete. When preparing
@@ -247,6 +275,34 @@ for the agreed scope only after explicit user acceptance. If the user accepts li
 items, make that boundary and outstanding proposals explicit. Neither interview
 confirmation nor written acceptance authorizes implementation.
 
+## Seed the domain glossary
+
+Immediately after written-spec acceptance and before the setup handoff, seed
+docs/GLOSSARY.md from the accepted SPEC.md using the glossary template. Include
+agreed domain entities, statuses, and named rules whose meaning could be misread;
+skip generic terms such as user, page, and button unless their domain meaning
+is genuinely specific. Keep it domain vocabulary only: general knowledge,
+decisions, rationale, and research references stay in their existing documents.
+
+Define each term in one or two sentences and use canonical terms within other
+definitions. List rejected synonyms under _Avoid_ where useful; do not invent
+synonyms to fill the format. Preserve existing entries and update them in place,
+surfacing conflicting meanings rather than silently replacing them. Do not turn
+Proposed or Deferred product choices into agreed definitions.
+
+For a new project without code, omit _In code_ lines entirely. For existing-project
+mapping, use the accepted spec where available and established domain names that
+recur in the code. Fill _In code_ only with observed identifiers/locations, and
+resolve spec/code meaning conflicts before presenting them as shared vocabulary.
+Phase 2 and implementation add mappings as the corresponding code is established.
+
+No separate glossary acceptance step is needed: the definitions express meanings
+already agreed in spec or established code. List the seeded terms in the Phase 1
+summary for correction. If a correction changes product behavior, surface the
+corresponding spec change rather than silently redefining the accepted scope.
+If no qualifying terms exist, state that briefly instead of fabricating entries.
+The [format provenance](../glossary/UPSTREAM.md) records the source and adaptations.
+
 ## Feature plans and foundation handoff
 
 Keep project-wide intent and high-level milestones in SPEC.md. Identify complex
@@ -258,7 +314,8 @@ Route requested feature planning through Cartographer's Phase 2 and the project'
 planning guide. Preserve existing plans and propose focused spec updates for
 product-scope changes instead of duplicating or silently superseding requirements.
 
-After spec acceptance, inspect whether application files and tooling exist.
+After spec acceptance and glossary seeding, inspect whether application files
+and tooling exist.
 For a new documentation-only project, leave the scaffolded AGENTS.md unseeded and
 end Phase 1 with a short setup note:
 
@@ -286,7 +343,7 @@ from implemented facts. If setup failed or is partial, report that state rather
 than inventing commands or claiming readiness. Existing projects with a codebase
 can use the agent workflow directly without a new framework-setup step.
 
-Summarize agreed scope, document status, remaining uncertainties, and candidate
-first features. The foundation is ready for its accepted scope when goals,
+Summarize agreed scope, document status, seeded glossary terms for correction,
+remaining uncertainties, and candidate first features. The foundation is ready for its accepted scope when goals,
 acceptance criteria, constraints, and a concrete next step are clear; other
 documentation may remain scaffolded when useful evidence does not exist yet.

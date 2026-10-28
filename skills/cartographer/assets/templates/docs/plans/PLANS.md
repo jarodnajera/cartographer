@@ -39,6 +39,11 @@ Acceptance alone does not authorize implementation; proceed when the
 user's request also authorizes the work. Do not request permission again
 for actions already authorized within that scope.
 
+Written acceptance records agreed scope; it does not grant or enforce tool
+permissions. The agent client's sandbox, permission settings, and approval
+mechanisms still apply. Available tool access does not itself authorize work
+outside the user's request.
+
 Resolve routine implementation details using project conventions and
 record significant choices with brief rationale. Ask the user about
 material changes to product behavior, scope, or agreed constraints.

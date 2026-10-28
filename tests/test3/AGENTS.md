@@ -91,7 +91,7 @@ verify local links. docs/TESTING.md is still a scaffold, not an established proc
 - [HANDOVER.md](HANDOVER.md) — latest observed state, checks and next action.
 - [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — unpopulated architecture scaffold.
 - [docs/TESTING.md](docs/TESTING.md), [docs/RUNBOOK.md](docs/RUNBOOK.md), and
-  [docs/COMPENDIUM.md](docs/COMPENDIUM.md) — scaffolds, not tested operational facts.
+  [docs/GLOSSARY.md](docs/GLOSSARY.md) — scaffolds, not tested operational facts.
 - [docs/plans/PLANS.md](docs/plans/PLANS.md) — feature planning conventions.
 - docs/adr/ — reserved for significant architectural decisions; no ADR exists yet.
 - [Current backend research](docs/research/vue-supabase-foundation.md) — selected design

@@ -189,7 +189,7 @@ Example of what the user would see:
 
 ### 4. Scaffolding is still eager
 
-Test2 contains four zero-byte docs (ARCHITECTURE, TESTING, RUNBOOK, COMPENDIUM) plus
+Test2 contains four zero-byte docs (ARCHITECTURE, TESTING, RUNBOOK, GLOSSARY) plus
 empty `adr/` and `research/` folders. The agent then has to explain that they are
 placeholders.
 

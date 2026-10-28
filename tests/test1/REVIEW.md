@@ -149,7 +149,7 @@ reduce length.
   config rather than project mapping. Consider moving them to a separate skill.
 - **TDD (adapted).** It references `codebase-design` and `code-review` skills that
   aren't bundled, so make those references conditional or remove them. It reads
-  `COMPENDIUM.md`, but the convention is `docs/COMPENDIUM.md`.
+  `GLOSSARY.md`, but the convention is `docs/GLOSSARY.md`.
 - **Provenance.** UPSTREAM.md files with pinned commits and licenses are excellent
   practice.
 
@@ -164,7 +164,7 @@ reduce length.
   through Cartographer's specification workflow" end up in the user's SPEC.md,
   where a later agent without Cartographer can't follow them.
 - **Zero-byte templates.** ARCHITECTURE.md, TESTING.md, RUNBOOK.md, and
-  COMPENDIUM.md are empty, unlike SPEC.md and HANDOVER.md, which have Status lines.
+  GLOSSARY.md are empty, unlike SPEC.md and HANDOVER.md, which have Status lines.
   Give each a title, a one-line purpose, and a status, or create them lazily.
 
 ### Per file
@@ -182,7 +182,7 @@ reduce length.
 - **PLANS.md.** Solid, with good attribution. It mentions Codex Plan mode only, so
   name both agents or neither. The `.gitkeep` in `docs/plans/` is redundant because
   PLANS.md is there.
-- **COMPENDIUM.md.** Needs a definition. It's described as durable knowledge in
+- **GLOSSARY.md.** Needs a definition. It's described as durable knowledge in
   some places and used as a domain glossary by TDD.
 - **SOUL.md / MEMORY.md.** Fine as optional templates. The agent-specific install
   details will go stale.
@@ -205,5 +205,5 @@ reduce length.
 7. **Consolidate rules.** SKILL.md handles routing and gates, prompts hold the
    workflow rules, and templates hold structure and hints.
 8. **Clean up.** Remove maintainer text from SKILL.md, rename nested `SKILL.md`
-   files, fix the TDD references, define COMPENDIUM.md, give empty templates status
+   files, fix the TDD references, define GLOSSARY.md, give empty templates status
    lines or create them lazily, and run tests in a scratch directory.

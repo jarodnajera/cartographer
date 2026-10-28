@@ -34,7 +34,7 @@ commands when implementation is separately requested.
   priorities, launch gates, and unresolved operational details.
 - [HANDOVER.md](HANDOVER.md): current state, verification, and next step.
 - [docs/plans/PLANS.md](docs/plans/PLANS.md): feature planning conventions.
-- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md, and docs/COMPENDIUM.md:
+- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md, and docs/GLOSSARY.md:
   intentionally empty scaffolds; they do not establish architecture or commands.
 - docs/adr/ and docs/research/: reserved locations, currently only .gitkeep files.
 

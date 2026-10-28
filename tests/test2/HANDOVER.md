@@ -16,7 +16,7 @@ Establish the Lancealot project foundation in this directory using Cartographer.
 - Complete: discovery, explicit local/web comparison and web selection, written-spec acceptance, documentation scaffold, framework research, and project-specific AGENTS.md.
 - SPEC.md is Accepted; D1–D11 and D13–D14 are Agreed, while D12 is explicitly Deferred. The accepted direction is a free public beta using Vue 3/Vite/TypeScript and Supabase database/Auth/RLS/Cron/Edge Functions with external email.
 - No application source, manifest, dependency installation, schema, service configuration, CI, or executable tests exist. Future directories in SPEC.md are proposals only.
-- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md and docs/COMPENDIUM.md remain unchanged templates. docs/plans/PLANS.md is the planning guide; no feature plan is selected or created. docs/adr/ remains empty apart from .gitkeep.
+- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md and docs/GLOSSARY.md remain unchanged templates. docs/plans/PLANS.md is the planning guide; no feature plan is selected or created. docs/adr/ remains empty apart from .gitkeep.
 - Current research: docs/research/vue-supabase-fit.md. The earlier framework-fit.md is marked superseded for stack selection.
 - No known broken application behavior can be assessed because no application exists. Deferred launch decisions do not block the accepted foundation.
 

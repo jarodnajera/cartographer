@@ -26,7 +26,7 @@ directory, the parent workspace's tests/; Cartographer's source is outside it.
 - AGENTS.md created from actual project state after written acceptance.
 - Documentation scaffold created and existing content preserved. Planning
   conventions are in docs/plans/PLANS.md. No individual feature plans exist.
-- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md and docs/COMPENDIUM.md remain
+- docs/ARCHITECTURE.md, docs/TESTING.md, docs/RUNBOOK.md and docs/GLOSSARY.md remain
   intentionally empty; no implemented architecture, commands, or operations exist.
   ADR/research directories contain only .gitkeep files.
 

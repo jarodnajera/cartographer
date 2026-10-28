@@ -40,6 +40,8 @@ Do not invent a stack, commands, directory structure, or conventions.
 7. Links to relevant maintained documentation. Link to SPEC.md for scope and
    release gates rather than repeating them. If a planning guide exists, include
    a short pointer for substantial feature work rather than copying its rules.
+   Once docs/GLOSSARY.md has content, link it with a one-line instruction:
+   "Use docs/GLOSSARY.md terms in code, UI text and tests."
 8. Project-specific pitfalls, when supported by experience or evidence.
 
 ## Writing rules

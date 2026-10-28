@@ -2,6 +2,9 @@
 
 Date: 2026-10-27 (America/Los_Angeles).
 
+Publication note: documentation filenames in this summary have been normalized
+to the current fixture layout.
+
 This chronological record preserves the user's project requests and answers, with assistant responses summarized. IDE tab/context metadata, tool output, and routine progress messages are omitted. This is a conversation record, not a verbatim transcript of every assistant message. [SPEC.md](SPEC.md) is the canonical accepted product specification; [AGENTS.md](AGENTS.md) contains project guidance and [HANDOVER.md](HANDOVER.md) records the foundation handoff.
 
 ## 1. Initial request
@@ -128,7 +131,7 @@ Explained that Cartographer's spec workflow requires explicit acceptance of the 
 - Database-enforced owner isolation, privileged-function authorization, secret handling, reminder consistency, and delivery-failure considerations.
 - Verification and feature-planning guidance tied to the actual project state.
 
-Completed HANDOVER.md with the foundation status, session authorization boundary, research, verification evidence, deferred gates, and candidate next work. Kept architecture/testing/runbook/compendium scaffolds unchanged because no application existed to document.
+Completed HANDOVER.md with the foundation status, session authorization boundary, research, verification evidence, deferred gates, and candidate next work. Kept architecture/testing/runbook/glossary scaffolds unchanged because no application existed to document.
 
 Reported passing documentation checks: 29 local links across SPEC.md, AGENTS.md, and HANDOVER.md; accepted/deferred decision consistency; removal of stale draft/interview notes; unchanged supporting templates; and a 13-file documentation/placeholder inventory. No runtime tests ran because there was no application or tooling.
 

@@ -237,7 +237,7 @@ capacity remain D15 release-gate decisions.
 ## Project folder structure
 
 Observed: SPEC.md, AGENTS.md, HANDOVER.md; docs/{ARCHITECTURE,TESTING,RUNBOOK,
-COMPENDIUM}.md; docs/plans/PLANS.md; docs/research/ notes and docs/adr/ placeholder.
+GLOSSARY}.md; docs/plans/PLANS.md; docs/research/ notes and docs/adr/ placeholder.
 No application or tooling is implemented. Supporting documents remain scaffolds.
 
 **Changeable default after setup:** src/ for Vue UI/data adapters, supabase/migrations/

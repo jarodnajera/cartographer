@@ -1,12 +1,24 @@
 ---
 name: research
-description: Investigate a question against primary sources and save cited findings as a Markdown note in the repo. Use when the user asks to research a topic, gather docs or API facts, or delegate reading to a background agent. Not for quick lookups that one search can answer in chat.
+description: Verify external facts or investigate a question against primary sources. Use quick verification for narrow lookups; save a cited research note when reusable findings or a research artifact are needed.
 ---
 
 # Research
 
-Answer a question from primary sources and leave a note someone can trust
-later without redoing the reading.
+Answer from primary sources, choosing an output proportional to the question.
+Apply the safeguards below to both modes before making external requests.
+
+## Choose the output
+
+- **Quick verification:** for a narrow fact or command check, consult the relevant
+  primary source and cite the answer in conversation or the document being updated.
+  No separate research note is required.
+- **Durable investigation:** use the workflow below when the user requests a
+  research artifact or the work needs reusable findings, comparisons, or a record
+  of conflicting evidence. Save a note someone can use without repeating the work.
+
+If a quick lookup reveals material uncertainty needing investigation, use the
+full workflow. The number of searches alone does not determine the output.
 
 ## Workflow
 
