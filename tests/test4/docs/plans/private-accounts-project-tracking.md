@@ -156,3 +156,62 @@ Local verification (Node 24.22.1): Vitest suites for domain, component boot/samp
 Test-runner adaptation: added PGlite to execute actual migration/RLS/job SQL in isolation because no Supabase CLI/Docker stack is configured. It supplements, not replaces, authored pgTAP and Playwright checks. Auth is a small SQL fixture shim; true hosted JWT/session behavior and simultaneous service workers still need review. Vitest forces blank connection configuration; sample mode is explicit and never silently stores real records.
 
 Both service gates remain false. D18 provider/cost/limit/region, backup/metadata retention, recovery/cleanup configuration and operating/support ownership remain unresolved before real-data/public use. The Resend adapter is optional code, not a vendor selection. No real accounts, emails, credentials, external deployment or production erasures were created. Features remain In progress until final review and service validation; do not mark Complete merely because code/local checks exist.
+
+## Phase 4a user findings and proposed remediation — 2026-10-29
+
+### UI-01 — Task-row actions wrap awkwardly
+
+- Source: user screenshot/report: “only thing wrong im noticing so far is how responsive this element is. its bunching up and looking awkward:”. Screenshot shows Complete task/Edit on the first action line and Delete below, while title and date retain separate columns.
+- Impact: medium visual/usability defect in responsive project details; controls remain present. User review is ongoing, not a declaration that all other criteria passed.
+- Source evidence: ProjectView.vue uses `.detail-row` for both tasks and invoices. In src/style.css, `.detail-row` allocates fractional columns to title/date/actions; `.actions` wraps and right-aligns buttons independently. Only at viewport width <=760px does the whole record stack. The <=1080px rule still divides the row into three fractional columns, allowing action crowding above the stacking breakpoint. This is consistent with the screenshot; a browser-confirmed minimal reproduction is still pending.
+- Reproduction to verify: enter the sample workspace, open Brand & website, resize the window across intermediate widths (start around 900 CSS px), and check the task action group. Also test browser zoom, long titles and invoice actions. This sequence has not been executed in a browser by the agent.
+- Proposed action: fix the shared task/invoice row layout. Reserve action width from its contents at comfortable widths, and move the entire action group onto a dedicated, left-aligned row when the record container becomes too narrow. Stack title/date/actions on small containers; preserve readable button labels and existing touch targets. Verify the transition against container space rather than relying only on the page viewport.
+- Proposed regression seam: rendered ProjectView task/invoice rows at desktop, intermediate and narrow widths. Observe action bounding boxes/order, usable controls and no horizontal overflow; this is a proposed browser acceptance check, not an agreed new durable test seam. A DOM-stub or CSS-text assertion would not establish layout correctness.
+- Evidence gap: browser runtime selection failed and discovery returned no instances. No screenshot/computed-layout reproduction or changed-CSS verification was possible. Installed diagnosing-bugs is absent; source inspection was performed independently, not claimed as execution of that skill. Source cause remains provisional until reproduced.
+- Decision: remediation proposed; acceptance and Phase 4b implementation authorization pending. No application CSS or component source changed.
+
+### UI-01 — Phase 4b implementation and checks
+
+The user's “yes” accepted the proposed remediation and authorized implementation
+on 2026-10-29. Added `record-panel` containers to both ProjectView record sections.
+Rows now use content-sized date/action columns above 42rem of panel content;
+below that, all actions occupy a dedicated row. Below 28rem title/date stack,
+and below 18rem buttons stack full-width. Removed competing viewport-based
+`.detail-row` column rules. Button labels and minimum touch height are retained;
+other page/action layouts are outside this change.
+
+Cause addressed in source: the action track was allocated a fraction of the
+remaining row width independently of the buttons' total intrinsic width, and
+button wrapping occurred before the viewport-based record stack. Container-based
+transitions now move the action group rather than leaving Delete stranded.
+
+Verification from lancealot/, Node 24.22.1: all 6 Vitest suites/32 tests passed;
+`npm run build` passed including Vue type checking and CSS production bundling.
+These are behavior/build checks, not a rendered-layout regression. Browser
+discovery again returned no instances. Installed tdd/diagnosing-bugs remain
+unavailable; no test-first or browser-confirmed red/green claim is made, and no
+CSS-text/DOM-stub test was added to simulate layout evidence. No dependencies
+were installed. Scoped source diff whitespace check passed; the whole-repository
+check still reports whitespace inside the verbatim pasted transcript, retained
+as evidence rather than rewritten.
+
+Standards/source pass: scoped record containers, readable new CSS, existing focus
+and touch-target rules preserved; unrelated controls unchanged. Spec/source pass:
+task and invoice records share the responsive behavior requested in UI-01; domain
+rules and reminder behavior are unchanged. These are local separate passes, not
+execution of the unavailable code-review skill or independent reviewer evidence.
+
+Status: implemented, awaiting rendered/user re-check. Refresh the application and
+resize the task and invoice panels through wide, intermediate and narrow widths,
+including browser zoom. Confirm Delete no longer hangs under the other actions
+in a cramped third column, controls remain usable, and no horizontal scrolling
+appears. Keep the plan In progress pending the remaining review evidence.
+
+### UI-01 user re-check
+
+User response: “yep that feels right. everything is looking good so far”.
+The reported responsive correction is accepted and UI-01 is resolved based on the
+user's hands-on re-check. This does not establish an automated browser result,
+a comprehensive resize/zoom matrix or acceptance of all three feature plans.
+Overall plans remain In progress: full Standards/Spec review and outstanding
+service verification are still pending.

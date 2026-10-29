@@ -50,7 +50,14 @@ revision used in evaluation.
 | Required | `grilling` | Phase 1 specification and Phase 2 feature discovery |
 | Recommended for Phase 2 | `codebase-design`, `domain-modeling` | Architecture decisions and consistent domain language |
 | Recommended for Phase 3 as needed | `writing-for-agents`, `wizard` | Agent-facing documentation and human-only procedures |
-| Optional for later development | `prototype`, `tdd`, `code-review` | UI exploration, implementation, and review respectively |
+| Recommended for Phase 2 exploration | `prototype` | Bounded UI or logic experiments |
+| Phase 3 and 4b behavior implementation | `tdd` | Test-first behavior at agreed seams |
+| Phase 4 review and diagnosis | `code-review`, `diagnosing-bugs`, `wizard` | Standards/spec review, confirmed causes, human-only test setup |
+
+Anthropic's [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
+is a separate recommended source for Phase 2b and UI implementation. Run
+`npx skills@latest add anthropics/skills` and select `frontend-design`; verify its
+installed instructions as with the other skills. Source checked 2026-10-28.
 
 Installation makes a skill available; it does not invoke it or authorize its
 workflow. These recommendations do not establish compatibility evidence for the
@@ -69,11 +76,30 @@ for agent-facing documentation and [wizard](https://github.com/mattpocock/skills
 for human-only procedures. Install complete skill folders, including supporting
 resources such as wizard's template.sh. The [implementation workflow](phases/implement-feature.md)
 defines when to load them, missing-skill handling, and explicit overrides for
-wizard retention and Git actions. Their integration has not been tested end to end.
+wizard retention and Git actions. Test4 reports using writing-for-agents during
+implementation documentation; wizard guidance was read but its manual procedure
+was not executed.
 
 The upstream full-toolbox setup is not a prerequisite for Cartographer's grilling
 integration. If you later adopt tracker-oriented workflows, review their setup
 and proposed document locations against the existing scaffold first.
+
+Phase 4 uses [code-review](https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review)
+and [diagnosing-bugs](https://github.com/mattpocock/skills/tree/main/skills/engineering/diagnosing-bugs).
+Read their installed instructions and supporting files. The
+[review workflow](phases/review-feature.md) owns explicit overrides for local spec
+sources, working-tree review, delegation availability, diagnosis-only work in 4a,
+and wizard execution/Git actions. `tdd` uses seams agreed in Phase 2a and calls for
+`codebase-design` when their design is unresolved; both use docs/GLOSSARY.md here.
+Phase 4 and the expanded TDD integration are active workflow instructions. Their
+behavioral evaluation remains pending; availability is not evidence of a passed run.
+
+Phase 2b selects structure and appearance separately, using rendered directions
+for the first substantial UI feature. Phase 3 implements the approved style and
+compares desktop/mobile screenshots. Screenshot critique requires an available
+permitted browser, such as Playwright with Chromium; unavailable rendering is
+reported explicitly. Browser installation is not automatic. This revised visual
+workflow has not yet been behaviorally evaluated.
 
 ## Compatibility evidence
 
@@ -85,14 +111,22 @@ The earlier bundled Cartographer workflow used:
   missing final newline. Prior manual foundation runs exercised that bundled
   workflow, not external skill resolution.
 
-**External integration: not yet tested end to end.** Installed skills can change
-when updated; record the installer version and skill source revision actually
-loaded during evaluation when available.
+**External integration: Test4 exercised the foundation-to-local-implementation
+path.** See its [conversation](../../../tests/test4/CONVERSATION.md),
+[handover](../../../tests/test4/HANDOVER.md) and
+[skill source/hash record](../../../tests/test4/skills-lock.json). This is one
+qualitative run, not a controlled comparison or a hosted/browser validation.
+The published transcript is redacted, reconstructs early exchanges, and omits
+tool events. Skill loading and execution order are reported, not independently
+verified by the transcript or lockfile.
+Missing-dependency behavior and the executed wizard path remain unproven.
+Installed skills can change when updated; record the installer version and skill
+source revision actually loaded during evaluation when available.
 Unknown or newer versions are not covered automatically by the earlier baseline.
 Installation guidance checked 2026-10-28.
 
-Test the migration with external grilling accessible and the bundled folder absent.
-Also test the missing-dependency path: interview work pauses with installation
+For subsequent runs, verify external grilling resolution and test the
+missing-dependency path: interview work pauses with installation
 instructions, while independent requested scaffolding can proceed. Use consistent
 inputs/client settings under the evaluation protocol.
 

@@ -16,6 +16,32 @@ Codex Plan mode can help investigate and propose an approach. When a
 persistent plan is requested, capture the result using this guide. These
 file conventions also work with other agents and human contributors.
 
+## Choose the plan size
+
+Use the smallest tier that makes the work executable and reviewable. Word ranges
+are editing budgets, not minimums or reasons to omit critical requirements:
+
+- **Light**: aim for 300–600 words for one bounded outcome with familiar interfaces
+  and low uncertainty. Combine scope/context, a short sequence with a review point,
+  acceptance checks, and progress. Skip unused sections.
+- **Standard**: aim for 600–1,200 words when cross-cutting behavior, migrations or
+  material uncertainty need milestones, failure cases and rollout/recovery detail.
+  Explain a necessary overrun briefly; link supporting evidence rather than
+  expanding the plan into a second spec or operations manual.
+
+For each detail ask: “Would a different choice require costly rework or change an
+agreed outcome?” Settle those choices; label inexpensive defaults as changeable
+and defer incidental implementation detail. Link existing spec/design/ops facts
+instead of copying them. Keep shared dependencies in one place across coupled
+plans. Before presenting a draft, remove repeated requirements and speculative
+edge cases that do not change implementation or verification.
+
+For several selected features, explain the added cost and propose implementation
+one plan at a time in dependency order. Name an observable review point at each
+plan boundary and within a large plan. A request to start several features does
+not by itself request an uninterrupted implementation pass. Honor an explicit
+continuous-pass request and still report milestone evidence.
+
 ## Document responsibilities and location
 
 - SPEC.md records project-wide product intent and acceptance criteria.
@@ -97,8 +123,8 @@ lessons. HANDOVER.md can link to these details for the next session.
 
 ## Starter structure
 
-Use the following outline as a starting point, adapting its depth to the
-work. For substantial plans, retain progress, discoveries, decisions, and
+The outline below is for a standard plan; a light plan combines sections.
+Adapt its depth to the work. For substantial plans, retain progress, discoveries, decisions, and
 outcomes so the document remains useful across sessions. Combine sections
 or omit irrelevant optional detail rather than filling boilerplate.
 

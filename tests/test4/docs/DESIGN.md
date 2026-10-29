@@ -129,3 +129,12 @@ Prototype verdict: Approved by the user on 2026-10-28. The user subsequently aut
 ## Phase 3 visual refinement
 
 Prototype verdict: Approved by the user on 2026-10-28, with an explicit request to apply frontend-design during implementation. Preserve Layout A and the cool paper/ink/blue palette. Refine the mark, type spacing, date-column hierarchy and grouped ledger rhythm; retain local Georgia headings and humanist sans-serif forms, restrained corners and explicit status text. First-pass critique: dashboard statistic cards would obscure the actual follow-up workflow; the implementation keeps work rows as the primary surface. Responsive stacking, form feedback and keyboard focus remain required. No new external font/image dependency is selected.
+
+## Project-record reflow — UI-01
+
+Task/invoice panels now respond to their own available width: wide records align
+title, date and content-sized actions; intermediate records put actions together
+on a separate left-aligned row; narrow records stack title/date, with full-width
+stacked buttons at the smallest sizes. Preserve labels and touch targets while
+avoiding an isolated Delete below a cramped action column. This approved
+refinement is implemented; rendered resize/zoom review remains pending.

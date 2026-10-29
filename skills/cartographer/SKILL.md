@@ -1,6 +1,6 @@
 ---
 name: cartographer
-description: Establish a new or existing software project's foundation through guided requirements discovery, documentation scaffolding, project mapping, feature planning, and authorized implementation of accepted plans. Use when the user wants to clarify an idea, organize project knowledge, or plan a substantial feature; not for routine implementation or debugging alone.
+description: Establish a new or existing software project's foundation through guided requirements discovery, documentation scaffolding, project mapping, feature planning, authorized implementation of accepted plans, and feature review/remediation. Use when the user wants to clarify an idea, organize project knowledge, plan a substantial feature, implement an accepted Cartographer plan, or review and remediate its delivery. Unrelated routine fixes or debugging do not need this workflow.
 ---
 
 # Cartographer
@@ -24,6 +24,8 @@ placeholders are not user answers.
 | Plan a substantial feature | [Phase 2a: Feature planning](references/phases/plan-feature.md) |
 | Define feature UI or project style guidance | [Phase 2b: Feature design](references/phases/design-feature.md) |
 | Implement an accepted feature plan | [Phase 3: Feature implementation](references/phases/implement-feature.md) |
+| Review a feature and plan fixes | [Phase 4a: Review](references/phases/review-feature.md#phase-4a-review-and-plan-remediation) |
+| Fix, refactor and complete a reviewed feature | [Phase 4b: Remediation](references/phases/review-feature.md#phase-4b-remediate-and-re-verify) |
 | Research a question or verify external facts | [Research guidance](references/research/SKILL.md): quick verification or a durable research note, as needed |
 | Write or resume a handover | [Handover workflow](references/prompts/create-handover.md), [HANDOVER template](assets/templates/HANDOVER.md) |
 | Set up personal preferences | [Optional profile workflow](references/prompts/create-soul.md) |
@@ -102,13 +104,15 @@ every candidate or begin application development.
 
 Follow [feature planning](references/phases/plan-feature.md) to select a bounded
 feature, clarify unresolved requirements, apply relevant companion skills, and
-draft a plan under docs/plans/PLANS.md. Preserve settled project decisions and
-record feature decisions in the plan; offer ADRs only for qualifying decisions.
+draft a proportionate plan under docs/plans/PLANS.md. For multiple selections,
+name the cost and propose implementation one feature at a time with review points.
+Preserve settled project decisions and record feature decisions in the plan; offer ADRs only for qualifying decisions.
 
 ## Phase 2b: Define the UI and design
 
 For features with UI work, follow [feature design](references/phases/design-feature.md)
-to settle flows and visual direction, maintain shared style guidance, and reconcile
+to settle structure, then visual direction with the user from rendered options.
+Use frontend-design to establish DESIGN.md and a styled prototype; reconcile
 the design with the feature plan before acceptance. Skip this phase when there is
 no UI impact. Plan acceptance alone does not authorize implementation.
 
@@ -116,9 +120,32 @@ no UI impact. Plan acceptance alone does not authorize implementation.
 
 Follow [feature implementation](references/phases/implement-feature.md) to execute
 an accepted plan within authorized scope, verify milestones, and update affected
-documentation. Use installed `writing-for-agents` for agent-facing documentation
-and `wizard` for human-only procedures when needed. Finish with implementation
-evidence and a handoff to final review and verification.
+documentation. Review one plan or large milestone at a time unless the user
+requests a continuous pass. Use installed `writing-for-agents` for agent-facing
+documentation and `wizard` for human-only procedures when needed. Finish with implementation
+evidence and a brief notification: Phase 3 is finished, Phase 4 begins, and the
+user should test and report bugs or desired changes.
+
+## Phase 4a: Review and plan remediation
+
+Follow [feature review](references/phases/review-feature.md#phase-4a-review-and-plan-remediation)
+to prepare hands-on checks, assess Standards and Spec, diagnose reported bugs, and
+present proposed remediation. Review actual working-tree changes as well as
+commits. Keep production fixes for authorized remediation; a clean, adequately
+verified review can proceed directly to the completion decision.
+
+## Phase 4b: Remediate and complete
+
+Follow [remediation](references/phases/review-feature.md#phase-4b-remediate-and-re-verify)
+for approved fixes and refactors, regression checks, and user re-checks. Present
+acceptance evidence and obtain explicit confirmation before marking the plan
+Complete. Repeat 4a/4b as new findings arise until the user and agent agree the
+feature is satisfactory for the agreed scope and ready for the next feature.
+Record blockers instead of declaring completion or repeating checks without new
+evidence. After the user explicitly accepts the feature and essential acceptance
+evidence is sufficient, mark its plan Complete and return to Phase 2a: suggest
+the next bounded feature or use the user's selection. Preserve the established
+foundation. Feature completion does not imply public-launch readiness.
 
 ## Toolbox and continuity
 
@@ -126,9 +153,9 @@ Recommend only tools relevant to the next step, explaining purpose, source,
 and dependencies. Load companion skills when the active phase calls for them;
 installation requires a user request. Other recommendations are not automatically
 invoked.
-[Matt Pocock's TDD skill](https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd)
-is an optional external recommendation. When asked to use it, locate and read its
-installed instructions and check its dependencies before claiming readiness.
+Use installed `tdd` for behavior suited to test-first implementation in Phases 3
+and 4b, at the seams agreed during planning. See dependency guidance for companion
+skill sources and availability handling.
 
 Use the handover workflow when asked to pause or resume. Report documents changed,
 verification actually performed, remaining limitations, and the next useful action.

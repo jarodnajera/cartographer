@@ -1,7 +1,12 @@
 # Phase 2a: Select and understand the feature
 
 1. Suggest a bounded first feature based on value, dependencies, uncertainty, and
-   project priorities, or use the user's selection.
+   project priorities, or use the user's selection. When several features are
+   selected, explain the added planning/review cost and propose implementing one
+   at a time in dependency order. Plan coupled decisions together without
+   duplicating shared requirements; use separate plans only for independently
+   reviewable outcomes. Name the first implementation slice and its review point.
+   Honor an explicit request for a continuous pass.
 2. Read the accepted SPEC.md, docs/GLOSSARY.md, relevant architecture, and actual
    code where it exists. Distinguish proposed structure from implemented behavior.
 3. Grill only unresolved feature requirements; preserve settled project decisions.
@@ -21,7 +26,14 @@
 7. Draft docs/plans/<feature>.md following the project's PLANS.md, or the
    [bundled planning guide](../../assets/templates/docs/plans/PLANS.md), including scope,
    milestones, acceptance criteria, and a verification strategy covering testing
-   and review. Include each prototype's verdict and any unresolved findings.
+   and review. Select the guide's light or standard tier; include a concrete
+   review point for each plan or large milestone. Propose test seams for main
+   behavior using codebase-design: name each public boundary, what tests there
+   catch, and what they miss. Obtain agreement through the plan review; resolve
+   unclear boundaries before test-first implementation. Identify external services,
+   human-only setup steps, and criteria needing live-service verification.
+   Include each prototype's verdict
+   and any unresolved findings.
 8. Update docs/GLOSSARY.md with newly agreed terms, and propose any spec change
    for approval before finishing the plan.
 9. Present the written plan and summarize its scope, approach, and remaining
@@ -71,8 +83,9 @@ user's scope:
 ## Completion and handoff
 
 Phase 2a ends with explicit confirmation of direction for UI features, or final
-written-plan acceptance for features without UI work, and a next-step summary. Keep the plan in Draft while material requirements
-or design choices remain unresolved. For a feature with UI work, carry approval
+written-plan acceptance for features without UI work, and a next-step summary.
+Keep the plan in Draft while material requirements or design choices remain
+unresolved. For a feature with UI work, carry approval
 of the planning direction into [Phase 2b](design-feature.md) and reconcile its
 outcomes before final plan acceptance. Otherwise record acceptance under PLANS.md.
 Design findings may reopen an affected planning decision. Revisit that part of

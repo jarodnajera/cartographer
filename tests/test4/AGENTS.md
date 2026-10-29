@@ -19,14 +19,10 @@ Use docs/GLOSSARY.md terms in code, UI text and tests. Preserve exact monetary s
 
 Derive ownership from authenticated context. Browser mutations use fixed-field RPCs and expected revisions; preserve same-owner relationship constraints, active-account gates and per-client reference uniqueness. Pin each request to its verified token so an account switch cannot save another session's pending form. Clear private state on authorization failure.
 
-Use the @ source alias and script-setup TypeScript. For UI work, read [DESIGN.md](docs/DESIGN.md) and apply [.agents/skills/frontend-design/SKILL.md](.agents/skills/frontend-design/SKILL.md); refine accepted Layout A while preserving accessible states. Keep production modules separate from retained HTML prototypes.
+Use the @ source alias and script-setup TypeScript. For UI work, read [DESIGN.md](docs/DESIGN.md) and apply the installed `frontend-design` skill; refine accepted Layout A while preserving accessible states. Keep production modules separate from retained HTML prototypes.
 
 ## Verification and operations
 
 Select a Node version supported by package.json/.nvmrc. Run `npm test` and `npm run build` from lancealot/ for affected implementation; additional browser/local-Supabase procedures are in [TESTING.md](docs/TESTING.md). Mocked/embedded checks do not prove hosted Auth, native browser behavior or Edge deployment. Record actual results in the feature plan/HANDOVER.md.
 
 Read [RUNBOOK.md](docs/RUNBOOK.md) for service setup, secret destinations, job recovery or gate activation. VITE variables are public; service/email/worker secrets stay server-side. Preserve ignored local configuration/generated output. Substantial changes follow [PLANS.md](docs/plans/PLANS.md).
-
-## Conversation continuity
-
-Append user messages (including supplied IDE context) and visible assistant commentary/final replies verbatim to [CONVERSATION.md](CONVERSATION.md), preserving chronology and historical wording. Exclude tool traffic, private reasoning and automatic runtime/UI metadata. Keep decisions/status in their canonical documents too.

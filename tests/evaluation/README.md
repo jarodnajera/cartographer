@@ -11,7 +11,9 @@ retroactively present them as controlled before/after evidence.
    Give the agent only the opening prompt, not the evaluator's answer bank or
    scoring checklist. Use a fresh conversation with the same agent instructions.
 2. Use an empty scratch project outside this repository, so other test projects
-   and repository instructions do not affect discovery. Preserve the complete
+   and repository instructions do not affect discovery. For authorized end-to-end
+   follow-ups, keep the generated app, dependency locks and data snapshots in that
+   scratch project or a separate app repository, not this skill repository. Preserve the complete
    Cartographer skill resources through the same installation method in each run.
 3. Record the skill commit and any uncommitted changes, model/client versions,
    reasoning setting, tools, memory state, instruction sources, and research date.
@@ -40,7 +42,14 @@ comparisons. No application implementation or external provisioning is requested
 
 ## Preserve evidence
 
-Store evidence separately from the target project, under a unique run directory:
+Store evidence separately from the target project, under a unique run directory.
+Retain selected documents, transcripts and a report in this repository; keep
+application source/locks/generated data in the scratch project or its separate
+repository, referenced by commit or external artifact location where available.
+Do not delete or relocate existing evaluation applications without user direction.
+The existing test4 app is historical evidence, not the model for future run layout.
+
+Suggested evidence layout:
 
 ```text
 <run-id>/
@@ -82,3 +91,23 @@ Research results, provider documentation, and model behavior can change. Record
 these confounders; consistent answers improve comparability but do not guarantee
 causal attribution. Passing this scenario is evidence about Phase 1 only, not
 feature planning, implementation, or general safety.
+
+## Separately authorized feature follow-ups
+
+Keep these separate from Phase 1 baseline scoring. For a multi-feature request,
+record whether the agent explains the added cost, proposes dependency order and
+names the first slice/review point. Measure each plan against its selected
+light/standard tier, noting justified overruns and duplicated canonical content.
+Check that implementation ends at the agreed review point unless a continuous
+pass was requested. For the first substantial UI feature, record the prototype
+offer, authorization, verdict and actual browser evidence or stated limitation.
+Inspect AGENTS.md for transient evaluation instructions and local skill paths.
+Use an external scratch project for generated application code; preserve evidence
+without silently removing existing runs.
+
+## Visual-direction follow-up
+
+Use the [Phase 2b visual-direction checks](phase2b-visual-review.md) for separately
+authorized design/implementation runs. Keep this evidence separate from Phase 1
+scores. Test4 remains the historical before example; do not redesign it to make
+its original evaluation appear to pass the new workflow.

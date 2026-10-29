@@ -1,7 +1,7 @@
 # Lancealot handover
 
-Status: In progress — Phase 3 source implemented and locally checked; hosted integration and rendered-browser verification pending.
-Last updated: 2026-10-28 (America/Los_Angeles).
+Status: In progress — Phase 4a hands-on review started; user findings and code review pending.
+Last updated: 2026-10-29 (America/Los_Angeles).
 
 ## Authority and current outcome
 
@@ -9,7 +9,7 @@ The user approved the HTML prototype and explicitly requested Phase 3, applying 
 
 Implemented approved Layout A as a responsive Vue ledger with account/signup/recovery forms, clients/projects, project-linked task/invoice editing, reversible statuses, guarded deletion, Today, digest preferences, exact-decimal JSON export and password-confirmed account deletion. An explicitly chosen fictional sample workspace works without credentials and resets on reload. Sample deletion clearly reports a simulation.
 
-The local development server is available at http://127.0.0.1:5173/ (session 67538 at handover). Choose “Explore sample workspace.” If it has stopped, use the Node version in lancealot/.nvmrc and run npm run dev from lancealot/.
+The earlier local development server is stopped (HTTP connection check on 2026-10-29 failed). Use the Node version in lancealot/.nvmrc and run npm run dev from lancealot/, then choose “Explore sample workspace” at the URL Vite prints.
 
 ## Source and active plans
 
@@ -40,3 +40,40 @@ D8 budget/date remain unset. D18 still requires vendor/plan cost and limits, reg
 ## Continuity
 
 Append user-authored messages (including IDE context) and visible assistant commentary/final replies verbatim to [CONVERSATION.md](CONVERSATION.md), excluding tool traffic and private reasoning. Preserve unrelated repository work. No subagents, commits or pushes were used. Cartographer, frontend-design, writing-for-agents and research guidance informed this implementation; the setup wizard guidance was inspected but not executed.
+
+## Phase 4a review checkpoint — 2026-10-29
+
+Current HEAD: ba598fc1f856f1d7009db7ee32e5355b4d7addea. A pre-implementation
+review baseline was not recorded during Phase 3. Do not use an empty HEAD diff
+as proof of review: inspect the implemented source, migrations/functions and tests
+under lancealot/ against the three accepted plans and SPEC.md, and state the
+limited change attribution. Current repository edits concern workflow/docs; they
+are separate from the implemented app. No Standards/Spec review has yet run.
+
+Start with accounts/project tracking, then dependent Today and data flows. The
+user checklist: add/edit a client/project/task/invoice; complete/reopen a task and
+mark paid/unpaid; check Today updates; complete/archive a project while confirming
+unresolved child reminders remain; try exact amount validation and protected
+parent deletion; download sample JSON. Sample changes reset on reload. For each
+issue collect steps, expected result and actual result as reported.
+
+Sample UI review cannot establish hosted Auth, password recovery, RLS isolation,
+real digest delivery or erasure. Test-environment setup remains unresolved; no
+provisioning is authorized by entering Phase 4. Follow the review workflow's
+wizard procedure if that setup is chosen. Await hands-on findings unless waived
+or delegated, then perform separate Standards/Spec review and diagnosis through
+confirmed cause. Prepare remediation before Phase 4b; no fixes or completion
+acceptance have been authorized in this review exchange.
+
+### First reported review issue
+
+UI-01 in the accounts/project-tracking plan records the user's task-row screenshot,
+source inspection, proposed shared task/invoice layout adjustment and browser-check
+seam. Browser connection is still unavailable; diagnosing-bugs is not installed.
+The user subsequently approved UI-01 and authorized Phase 4b. The responsive
+change is implemented for both task/invoice panels using container-based rows.
+The 32 local tests and production/type-check build passed again. Browser
+verification by the agent is still unavailable. The user re-checked the change
+and accepted it: “yep that feels right. everything is looking good so far”. UI-01
+is resolved on that hands-on evidence. Full Standards/Spec review and outstanding
+live-service checks remain pending; the plans are not marked Complete.

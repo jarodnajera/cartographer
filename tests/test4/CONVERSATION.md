@@ -1,6 +1,6 @@
 # Conversation — Lancealot (test4)
 
-Publication copy — redacted transcript of user-authored messages (including their IDE context) and user-visible assistant commentary/final replies, in chronological order. Personal absolute filesystem paths in links were replaced with relative repository links; other message wording is preserved. This is not an unmodified raw transcript. Tool calls/results and automatically supplied environment/UI metadata are excluded. Message labels are transcript structure, not part of the original messages. No message timestamps were available; none are invented.
+Publication copy — redacted transcript of user-authored messages (including their IDE context) and user-visible assistant commentary/final replies, in chronological order. Personal absolute filesystem paths in links were replaced with relative repository links; a local attachment path was redacted; trailing whitespace was normalized; other message wording is preserved. This is not an unmodified raw transcript. Tool calls/results and automatically supplied environment/UI metadata are excluded. Message labels are transcript structure, not part of the original messages. No message timestamps were available; none are invented.
 
 ## Message 01 — User
 
@@ -1128,5 +1128,538 @@ Partly. The detailed plans gave me enough direction to carry out a substantial i
 Most of the work was implementing and checking the tricky behavior: private ownership, exact invoice amounts, reminder timing and DST, retries, and account deletion. Updating the documentation and verbatim transcript added overhead too.
 
 So the plans helped sustain the work; they didn’t inherently make it slower. I also chose a broad implementation pass. Smaller milestones would give you earlier review points and shorter turns, even if the total work stayed similar.
+
+---
+
+## Message 87 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/CONVERSATION.md
+
+## Open tabs:
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- AGENTS.md: tests/test4/AGENTS.md
+- phase2-account-data-delivery.md: tests/test4/docs/research/phase2-account-data-delivery.md
+- RUNBOOK.md: tests/test4/docs/RUNBOOK.md
+- TESTING.md: tests/test4/docs/TESTING.md
+
+## My request:
+did you leverage codebase-design and domain-modeling for GLOSSARY.md? did you also leverage writing for agents for documenting after coding?
+
+---
+
+## Message 88 — Assistant — commentary
+
+I’ll check the recorded skill usage and documentation changes so I can distinguish foundation work from the implementation follow-up.
+
+---
+
+## Message 89 — Assistant — final
+
+Yes, with different roles:
+
+- **domain-modeling** informed the shared vocabulary, relationships and lifecycle rules captured in GLOSSARY.md—for example, completing a project does not resolve its unpaid invoices or unfinished tasks.
+- **codebase-design** informed module boundaries and testable interfaces. Its contribution to the glossary was indirect; after implementation, I added mappings to actual types, tables and functions.
+- **writing-for-agents** was applied during the post-coding documentation pass: AGENTS.md, ARCHITECTURE.md, TESTING.md, RUNBOOK.md, plans and HANDOVER.md. Those documents distinguish implemented source, checks actually run and remaining verification.
+
+The earlier conversation explicitly records using domain-modeling/codebase-design during planning; the handover records writing-for-agents during implementation. That records usage, rather than proving every skill instruction was perfectly satisfied.
+
+---
+
+## Message 90 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/CONVERSATION.md
+
+## Open tabs:
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- AGENTS.md: tests/test4/AGENTS.md
+- phase2-account-data-delivery.md: tests/test4/docs/research/phase2-account-data-delivery.md
+- RUNBOOK.md: tests/test4/docs/RUNBOOK.md
+- TESTING.md: tests/test4/docs/TESTING.md
+
+## My request:
+here's a review:
+
+Test4 is the first run that goes end to end: foundation, three plans, design, a prototype, and a working implementation. Much of the newer design worked as intended.
+
+**What worked**
+
+- **Option questions in Phase 2a.** The feature interview used A/B picks, and the user answered with letters.
+- **GLOSSARY.md** was seeded, and the `In code` mappings were filled in once identifiers existed.
+- **AGENTS.md** came in at about 370 words, within the budget. It's mostly lasting guidance, such as the "never convert invoice amounts through JavaScript Number" rule.
+- **ARCHITECTURE.md, TESTING.md and RUNBOOK.md** were written after code existed, as planned.
+- **Verification reporting was honest.** The handover separates what passed (32 tests and the build) from what wasn't proven: hosted Auth, rendered browser behavior and Edge runtime. It explains why: PGlite uses an auth shim, and Happy DOM stubs native dialogs.
+- **Safe defaults.** Live digest and erasure stay off by default. The fictional sample workspace lets you review the app without credentials, which is a nice touch.
+- **Ambiguous answers were treated cautiously.** When "continue in test4" didn't answer which Supabase project to use, the agent didn't read it as approval.
+- **skills-lock.json** records the source and hash of each installed Pocock skill, which partly answers the earlier pinning concern.
+
+**What to fix**
+
+1. **Three features at once made everything heavy.** The agent recommended one bounded feature, you asked for three, and it went along. That led to three plans of about 3,000 words each and one long implementation pass with no review point. The agent said so itself in its last reply: smaller milestones would have given you earlier review points. Two changes would help:&#x20;
+   - In Phase 2a, when the user picks several features, plan them together if they're coupled, but name the cost and propose implementing one at a time.
+   - In Phase 3, stop for review after each plan, or each large milestone, unless the user asked for a continuous pass.
+2. **Plans need the same size rules the spec got.** Spec, plans, design and ops docs total about 28,000 words for an app that isn't deployed. The "would we have to undo work?" test and the light versus standard tiers should apply to PLANS.md too.
+3. **2b didn't offer the prototype until you asked.** Rule 3 says to offer one "if interactive exploration would resolve uncertainty," and the agent decided static wireframes were enough. When a visual direction is being chosen for the first UI feature, I'd make offering the HTML prototype the default. When it was built, it rendered blank because a helper named `top` clashed with `window.top`. The script checks missed it, and no browser was connected. If headless Chromium is available, opening the file once with Playwright would catch this kind of failure. If not, say up front that rendering is unchecked; the agent did say that.
+4. **Session instructions leaked into AGENTS.md again.** Two lines in it don't belong there:&#x20;
+   - **The "Conversation continuity" section.** Your mid-run "record our conversation… update it as we go" became a lasting rule for every future agent. create-agents.md says to ask when an instruction's duration is unclear; this one was a test-harness request.
+   - **A link to `.agents/skills/frontend-design/SKILL.md`.** That path is local, excluded from Git, and specific to one agent. Refer to the skill by name instead.
+5. **Phases and README are out of sync:**&#x20;
+   - Phase 3 hands off to a "Phase 4" for final review, but SKILL.md doesn't define one. Your earlier outline had review and testing as Phase 3. Either add Phase 4 or make the handoff generic until it exists.
+   - The README still lists `prototype` as "optional for later development," but it's now part of Phase 2.
+   - The README doesn't list frontend-design. It's an Anthropic skill, not a Pocock one, so it needs its own install line.
+   - The README still says the npx migration "needs an end-to-end smoke test." Test4 is that test, so update the line.
+   - The skill description still says "not for routine implementation," which is a little odd now that Phase 3 implements features.
+6. **Repo hygiene.** About 11,000 lines of app code went into the skill repo, including `package-lock.json` and a 2,000-line `currencies.json`. Last time you deleted the app before committing. Keeping test apps in a separate repo, or only committing the docs, would keep the skill repo small. Running in a scratch directory per your evaluation protocol would also stop paths like `tests/test4/lancealot` from showing up in AGENTS.md.
+
+If you only fix two things, make them one feature at a time with a review point in Phase 3, and size limits for plans. Those are what made this run long, which is what your last question to the agent was about.
+
+---
+
+## Message 91 — Assistant — commentary
+
+I’ll use this review to update Cartographer, starting with the two priorities: smaller implementation steps with review points, and proportional plan sizes. I’ll also reconcile the phase/README guidance and AGENTS.md rules. I’ll leave the test app in place.
+
+---
+
+## Message 92 — Assistant — commentary
+
+The review matches the current guidance: Phase 3 refers to an undefined Phase 4, and the planning guide has no size tiers. I’m applying skill-creator guidance for the workflow edits. The transcript will remain test evidence, but I’ll remove its capture requirement from the project’s durable AGENTS.md.
+
+---
+
+## Message 93 — Assistant — commentary
+
+The changes now specify one plan or large milestone per review point, with an override for an explicit continuous-pass request. Plans have light and standard word budgets, and the first substantial UI feature defaults to offering a prototype. I also fixed the README/phase references and AGENTS.md issues. The skill validator could not run because PyYAML is missing; I’m checking links, frontmatter and the diff separately.
+
+---
+
+## Message 94 — Assistant — final
+
+Applied the review, prioritizing the two biggest changes:
+
+- **Review points:** Phase 2a proposes implementation one feature at a time; Phase 3 pauses after each plan or large milestone unless continuous work is explicitly requested.
+- **Plan budgets:** Light plans target 300–600 words; standard plans 600–1,200. Longer plans need justification. Both use the costly-rework test and link shared requirements.
+
+Also updated prototype-offer/browser-check guidance, removed the undefined Phase 4 references, reconciled README/dependency guidance, and cleaned AGENTS.md of transcript instructions and local skill paths. Evaluation guidance now explicitly keeps generated apps outside the skill repo.
+
+Existing accepted plans and app code remain intact; this does not retroactively shorten the test4 run.
+
+Checks passed for local links, frontmatter parsing and diff whitespace. The full skill validator was unavailable because PyYAML is missing. These workflow changes still need a fresh evaluation run.
+
+---
+
+## Message 95 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/CONVERSATION.md
+
+## Open tabs:
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- AGENTS.md: tests/test4/AGENTS.md
+- phase2-account-data-delivery.md: tests/test4/docs/research/phase2-account-data-delivery.md
+- RUNBOOK.md: tests/test4/docs/RUNBOOK.md
+- TESTING.md: tests/test4/docs/TESTING.md
+
+# Files pasted by the user:
+
+## "# Plan: Add Phase 4 (review, then remediation) and place TDD ## Goal Add a two-…": [local attachment path redacted]
+
+Pasted text contains the user's request.
+
+## My request:
+
+Attached text (verbatim):
+
+# Plan: Add Phase 4 (review, then remediation) and place TDD
+
+## Goal
+
+Add a two-part Phase 4 after implementation:
+
+- **4a: Review and plan remediation.** The user reviews and tests Phase 3's work
+  hands-on. The agent then runs `code-review`, diagnoses any reported bugs with
+  `diagnosing-bugs`, and writes a remediation plan.
+- **4b: Remediate.** The agent fixes bugs, refactors, and re-verifies against that
+  plan, then the feature is marked Complete.
+
+Also place Pocock's `tdd` across Phases 2a, 3 and 4b.
+
+Sources checked against mattpocock/skills at `59db609`: `tdd` doc, `code-review`,
+`diagnosing-bugs`.
+
+## Where TDD fits
+
+Mainly **Phase 3**, with seams agreed in **2a** and reused for fixes in **4b**. Not in 4a.
+
+| Phase | Role of `tdd` | Why |
+| --- | --- | --- |
+| 2a | Agree the test seams in the plan (the public boundaries tests will observe), using `codebase-design`. | `tdd` won't write a test at an unagreed seam and stops to ask otherwise. Its own docs say seams are best agreed up front, with the whole feature in view; the user reports choosing seams mid-build is its biggest friction. |
+| 3 | Build each milestone test-first: one failing test, minimal code, repeat (vertical slices). | `tdd` is a reference that runs inside the build step, not a step of its own. |
+| 4a | None. `code-review` checks that only the agreed seams were used. | Review, not building. |
+| 4b | Every fix starts with a failing regression test at a correct seam. | Same loop as `diagnosing-bugs`' fix step; keeps fixes from regressing. |
+
+Two details to carry into Cartographer:
+
+- **`tdd` no longer refactors.** It's red-green only, and its docs say refactoring
+  belongs to `code-review`. That matches your split: build in Phase 3, refactor in 4b.
+- **Not every change suits TDD.** Its docs flag config, wiring, glue and straight CRUD
+  as poor fits (open issue #746), where tests just restate the code. Phase 3 should
+  apply `tdd` to behavior with a real input and output, and use simpler checks
+  elsewhere. Also from its docs: browser and end-to-end tests come after the behavior
+  works, not first.
+
+`tdd` requires `codebase-design`, which is already recommended for Phase 2a.
+
+## Phase 4a: Review and plan remediation
+
+Proposed steps for `references/phases/review-feature.md`:
+
+> 1. **Prepare the user's review.** From the plan's acceptance criteria and Phase 3's
+>    list of unverified items, give the user a short test checklist: how to run the
+>    app, what to try per criterion, and edge cases worth poking. Include the review
+>    fixed point (see Phase 3 changes).
+> 2. **Offer live setup when needed.** If any checks need a live service, offer
+>    `wizard` to set up a test environment: what it sets up, time, cost, and that it
+>    isn't the launch decision. Run it only after an explicit yes; if the answer is
+>    ambiguous, keep the item open and repeat the choice at the end of 4a.
+> 3. **User reviews and tests.** Wait for the user's findings. Record them in the
+>    feature plan as reported, without re-interpreting them.
+> 4. **Code review.** Run installed `code-review` against the review fixed point,
+>    with the feature plan and SPEC.md as its spec source. Cartographer overrides:
+>    no issue tracker is needed; the spec source is the feature plan and SPEC.md.
+> 5. **Diagnose reported bugs.** For each bug from the user or the review, use
+>    installed `diagnosing-bugs` through reproduction and a confirmed cause: build a
+>    feedback loop, reproduce and minimise, hypothesise, instrument. Stop before the
+>    fix. Record the repro command and confirmed cause in the plan. Remove debug
+>    instrumentation before leaving 4a. If no loop can be built, record what's
+>    needed from the user.
+> 6. **Write the remediation plan.** Add a "Remediation" section to the same feature
+>    plan, listing each finding with:
+>    - its source (user, Standards review, Spec review, diagnosis)
+>    - severity
+>    - the agreed action: fix, refactor, defer, or reject
+>    - the regression test seam, or "no correct seam" (a finding in itself)
+>
+>    Order the items: bugs first, then spec gaps, then refactors. If remediation is
+>    large, link a separate `docs/plans/<feature>-remediation.md` from the plan
+>    instead.
+> 7. **Approval.** Present the remediation plan and ask: "Do you approve this
+>    remediation plan?" Approval of the plan does not authorize the work; 4b needs
+>    its own go-ahead unless the user already gave it.
+
+## Phase 4b: Remediate
+
+> 1. **Fix bugs test-first.** Follow the remediation order. For each bug, write
+>    the regression test at the agreed seam, watch it fail, fix, watch it pass, then
+>    re-run the original repro (`diagnosing-bugs` fix and cleanup steps, with
+>    `tdd`'s loop).
+> 2. **Refactor agreed items only.** Address the review's agreed findings (e.g.
+>    Duplicated Code, Feature Envy) with all tests green before and after. No new
+>    features or rewrites.
+> 3. **Re-verify.** Run the full suite and build, and re-run any live or browser
+>    checks the fixes touched. Record actual results.
+> 4. **Update docs** affected by the changes: ARCHITECTURE.md, TESTING.md,
+>    RUNBOOK.md, GLOSSARY.md, AGENTS.md pitfalls. Record each confirmed root cause
+>    in the plan.
+> 5. **User re-check.** Ask the user to confirm the fixes they reported.
+> 6. **Completion.** Present each acceptance criterion with its evidence, plus
+>    anything deferred. Ask: "Do you want to mark this plan Complete, with these
+>    items deferred?" Mark Complete only after an explicit yes. Then point to the
+>    next feature, or to launch-gate work if only launch items remain.
+
+## Cartographer overrides for companion skills
+
+| Skill | Upstream behavior | Override |
+| --- | --- | --- |
+| `code-review` | Expects an issue tracker; asks the user to run `/setup-matt-pocock-skills` if none is configured. | Use the feature plan and SPEC.md as the spec source. Don't require a tracker. |
+| `code-review` | Diffs `HEAD` against a git fixed point. | Phase 3 records a fixed point. If the project isn't in git or has no commits, say so and review the changed files listed in the plan instead. |
+| `diagnosing-bugs` | Records the correct hypothesis in a commit or PR message. | Record it in the feature plan; commit only under the user's Git workflow. |
+| `diagnosing-bugs` | Runs through the fix in one pass. | In 4a, stop at a confirmed cause; fix in 4b. |
+| `wizard` | Its own retention and commit rules. | Keep the existing Cartographer overrides (no commits unless authorized, secrets never in chat or files). |
+
+## Changes by file
+
+### 1. New `references/phases/review-feature.md`
+
+Phase 4a and 4b steps above, plus the overrides table. Move the full wizard
+procedure here from implement-feature.md.
+
+### 2. SKILL.md
+
+- Add routing rows:
+  - "Review a feature and plan fixes" → Phase 4a
+  - "Fix, refactor and complete a reviewed feature" → Phase 4b
+- Add short Phase 4a and 4b sections pointing to the workflow file.
+- Update the description to cover review and remediation.
+
+### 3. `references/phases/plan-feature.md` (Phase 2a)
+
+In the plan draft step, add:
+
+- the test seams for the feature's main behavior, agreed with the user, using
+  `codebase-design`
+- external services, human-only setup steps, and which acceptance criteria need a
+  live service to verify
+
+### 4. `references/phases/implement-feature.md` (Phase 3)
+
+- **Before starting:** record the review fixed point (current commit or branch).
+  If the project has no commits, ask the user whether to commit a baseline under
+  their Git workflow, or note that 4a will review changed files instead.
+- **Building:** use installed `tdd` for milestones with behavior that has a clear
+  input and output, at the seams agreed in the plan. Skip it for config, wiring and
+  glue. Write browser and end-to-end tests after the behavior works.
+- **Handoff:** list what couldn't be verified and why, then hand off to Phase 4a.
+  Stop after each plan unless the user asked for a continuous pass.
+- **Wizard:** keep only for human-only steps that block implementation itself;
+  point to Phase 4 for the full procedure.
+
+### 5. PLANS.md template
+
+- Add a "Test seams" line under Approach.
+- Add "User review findings" and "Remediation" sections under Verification.
+- Status rule: Complete only after Phase 4b and the user's explicit yes.
+
+### 6. README.md and `references/dependencies.md`
+
+Update the companion-skill table:
+
+| Role | Skills |
+| --- | --- |
+| Required | `grilling` |
+| Phase 2a | `domain-modeling`, `codebase-design` (also required by `tdd`) |
+| Phase 2a/2b | `prototype`; Anthropic's `frontend-design` for 2b and Phase 3, with its own install line |
+| Phase 3 | `tdd`, `writing-for-agents`, `wizard` (blocking steps only) |
+| Phase 4 | `code-review`, `diagnosing-bugs`, `wizard` |
+
+Also remove the "needs an end-to-end smoke test" note; test4 covered it.
+
+### 7. Evaluation
+
+Add a Phase 4 scenario starting from test4's Lancealot output, with one or two seeded
+bugs for the user to report:
+
+- Did 4a give the user a usable test checklist before asking for findings?
+- Was code-review run against a real fixed point, or the limitation stated?
+- Did diagnosis stop at a confirmed cause with a repro command, without fixing?
+- Was the remediation plan ordered and approved before any fixes?
+- Did every 4b fix start with a failing regression test, or record "no correct seam"?
+- Was refactoring limited to agreed findings?
+- Was the plan marked Complete only after an explicit yes?
+
+## Done when
+
+- SKILL.md routes to 4a and 4b, and Phase 3 hands off to 4a.
+- Phase 2a plans include agreed test seams; Phase 3 uses `tdd` at them.
+- A run on Lancealot produces a user checklist, a two-axis review, diagnosed bugs
+  with repro commands, an approved remediation plan, test-first fixes, and an
+  explicit Complete.
+
+## Out of scope
+
+- Production deployment, launch gates (D18) and paid provisioning.
+- Pocock's `implement` skill. Cartographer's Phase 3 drives the build loop instead;
+  revisit only if Phase 3 proves weak.
+
+---
+
+## Message 96 — Assistant — commentary
+
+I’ll read the attached plan and apply it to Cartographer’s workflow.
+
+---
+
+## Message 97 — Assistant — commentary
+
+I’m using skill-creator guidance for this update. I’ll keep Phase 4a read-only through diagnosis and remediation planning, then require authorization for 4b fixes. I’ll also add the Lancealot evaluation scenario; its user review and approval steps will remain pending rather than being treated as completed.
+
+---
+
+## Message 98 — User
+
+# Context from my IDE setup:
+
+## Open tabs:
+- SKILL.md: skills/cartographer/SKILL.md
+- design-feature.md: skills/cartographer/references/phases/design-feature.md
+- implement-feature.md: skills/cartographer/references/phases/implement-feature.md
+- plan-feature.md: skills/cartographer/references/phases/plan-feature.md
+- review-feature.md: skills/cartographer/references/phases/review-feature.md
+
+## My request:
+okay so we're in phase 4 now which is testing
+
+---
+
+## Message 99 — Assistant — commentary
+
+Yes—we’re at Phase 4a: hands-on testing, code review, and diagnosis. I’ll check the current workflow and prepare a short Lancealot test checklist. Fixes belong in Phase 4b, after the remediation plan is agreed.
+
+---
+
+## Message 100 — Assistant — final
+
+Yes—**Phase 4a is testing and review**. Phase 4b is fixing the agreed findings and re-testing.
+
+The earlier server has stopped. From `tests/test4/lancealot`, run `npm run dev` using the Node version in `.nvmrc`, then choose **Explore sample workspace**.
+
+Try:
+
+- Creating/editing clients, projects, tasks and invoices.
+- Completing/reopening tasks and marking invoices paid/unpaid; check Today updates.
+- Completing/archiving a project; unresolved child reminders should remain.
+- Amount validation, protected parent deletion and JSON export.
+
+Send reproduction steps, expected behavior and actual behavior for any issues. I’ll then review the code, diagnose the findings and prepare remediation. Live Auth, email and real erasure still need a configured test environment.
+
+---
+
+## Message 101 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/CONVERSATION.md
+
+## Open tabs:
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- SKILL.md: skills/cartographer/SKILL.md
+- design-feature.md: skills/cartographer/references/phases/design-feature.md
+- implement-feature.md: skills/cartographer/references/phases/implement-feature.md
+- plan-feature.md: skills/cartographer/references/phases/plan-feature.md
+
+## My request:
+only thing wrong im noticing so far is how responsive this element is. its bunching up and looking awkward:
+
+[User supplied a screenshot attachment; image pixels are not reproduced in this text log.]
+
+---
+
+## Message 102 — Assistant — commentary
+
+I see the awkward wrap: “Delete” drops below the other actions while the title and date stay in columns. I’ll inspect the layout rules and record the cause and proposed fix for Phase 4a.
+
+---
+
+## Message 103 — Assistant — commentary
+
+Both task and invoice rows use the same three-column layout, while their action buttons wrap independently. That appears to explain the screenshot. I’m applying frontend-design guidance to the proposed adjustment. The diagnosing-bugs skill isn’t installed here, so I’ll record that limitation and distinguish source inspection from browser verification.
+
+---
+
+## Message 104 — Assistant — final
+
+The buttons wrap independently while the title and date stay in columns, leaving “Delete” stranded below the other actions.
+
+Proposed fix: keep the actions together where space permits, then move the whole group beneath the record when space gets tight. Apply this to tasks and invoices. I recorded it as UI-01; browser reproduction is still pending because no browser is connected.
+
+Do you approve this fix and want me to implement it in Phase 4b?
+
+I’m pausing at this point because [the Phase 4a workflow](../../skills/cartographer/references/phases/review-feature.md) says “production fixes belong in 4b.”
+
+---
+
+## Message 105 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/docs/prototypes/README.md
+
+## Open tabs:
+- README.md: tests/test4/docs/prototypes/README.md
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- SKILL.md: skills/cartographer/SKILL.md
+- design-feature.md: skills/cartographer/references/phases/design-feature.md
+- implement-feature.md: skills/cartographer/references/phases/implement-feature.md
+
+## My request:
+yes
+
+---
+
+## Message 106 — Assistant — commentary
+
+I’ll implement UI-01 for task and invoice rows, then run the build and available checks. Browser verification will remain pending until I can connect to a browser.
+
+---
+
+## Message 107 — Assistant — final
+
+Updated both task and invoice rows. Actions now move together beneath the record as space narrows, with vertically stacked buttons on very small screens.
+
+All **32 tests** and the production build pass. Browser verification remains pending because no browser is connected.
+
+Refresh the app and resize that panel again—please check whether the spacing now feels right.
+
+---
+
+## Message 108 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/docs/RUNBOOK.md
+
+## Open tabs:
+- RUNBOOK.md: tests/test4/docs/RUNBOOK.md
+- TESTING.md: tests/test4/docs/TESTING.md
+- README.md: tests/test4/docs/prototypes/README.md
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- SKILL.md: skills/cartographer/SKILL.md
+
+## My request:
+yep that feels right. everything is looking good so far
+
+---
+
+## Message 109 — Assistant — commentary
+
+I’ll record the responsive fix as accepted. The plans will stay in progress while code review and the remaining live-service checks are pending.
+
+---
+
+## Message 110 — Assistant — final
+
+Recorded **UI-01 as resolved** following your re-check.
+
+The next Phase 4 step is the full Standards/Spec code review. Live Auth, email and account-deletion verification also remain pending; the feature plans stay in progress.
+
+---
+
+## Message 111 — User
+
+# Context from my IDE setup:
+
+## Active file: tests/test4/docs/RUNBOOK.md
+
+## Open tabs:
+- RUNBOOK.md: tests/test4/docs/RUNBOOK.md
+- TESTING.md: tests/test4/docs/TESTING.md
+- README.md: tests/test4/docs/prototypes/README.md
+- CONVERSATION.md: tests/test4/CONVERSATION.md
+- SKILL.md: skills/cartographer/SKILL.md
+
+## My request:
+where did you record UI-01
+
+---
+
+## Message 112 — Assistant — commentary
+
+I’ll check the exact file locations.
+
+---
+
+## Message 113 — Assistant — final
+
+In the [accounts/project-tracking plan](docs/plans/private-accounts-project-tracking.md:162):
+
+- Original finding and proposed fix: line 162.
+- Implementation and checks: line 173.
+- Your re-check and resolution: [line 210](docs/plans/private-accounts-project-tracking.md:210).
+
+There’s also a summary in [HANDOVER.md](HANDOVER.md:70).
 
 ---
