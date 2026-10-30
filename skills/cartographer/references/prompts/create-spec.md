@@ -63,6 +63,11 @@ Unknown commands, architecture, or operations must not be fabricated.
 
 ## Interview and progressive drafting
 
+For ambiguous terms, relationships or behavior-changing scenarios, load installed
+`domain-modeling` alongside grilling and follow the
+[domain integration rules](../domain-guidance.md). Keep resolved meanings in the
+Draft spec during discovery; those rules override inline glossary/ADR writes.
+
 Use grilling's design tree, question format, and dependency-aware rounds. Ask
 questions whose prerequisites are settled, wait for answers, and recompute the
 frontier after each round. Research discoverable facts directly; use sub-agents
@@ -274,6 +279,10 @@ instructions or a repeated explanation of its acceptance gates. Mark it Accepted
 for the agreed scope only after explicit user acceptance. If the user accepts limited scope with deferred
 items, make that boundary and outstanding proposals explicit. Neither interview
 confirmation nor written acceptance authorizes implementation.
+
+Before closing written-spec acceptance, perform the
+[batched ADR assessment](../domain-guidance.md#adr-assessment-at-acceptance), with
+any optional recording decision distinct from spec acceptance.
 
 ## Seed the domain glossary
 

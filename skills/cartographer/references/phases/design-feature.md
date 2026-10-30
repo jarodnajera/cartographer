@@ -7,6 +7,13 @@ SPEC.md, glossary, existing screens and any brand/design guidance first. Preserv
 settled requirements; a small UI change may need only existing components and a
 short design section in its plan.
 
+Before building visual previews, check browser readiness: verify an available
+permitted real browser can open a local page and capture a screenshot. Follow the
+environment's browser instructions; Playwright/Chromium is one option, not a
+mandatory replacement for supported tooling. Explain a failed/unavailable check
+and its implications before preview work, offering supported setup or an explicitly
+unverified human-review path. Do not install tools implicitly.
+
 ## Design with the user
 
 1. **Flows and states.** Define relevant screens and user flows, including empty,
@@ -54,7 +61,9 @@ short design section in its plan.
    the affected part of Phase 2a without restarting settled discovery. Surface
    material scope changes. Present the reconciled written plan and design for
    explicit final acceptance, combining this with final prototype confirmation
-   when reviewing them together avoids a redundant question.
+   when reviewing them together avoids a redundant question. At acceptance, follow
+   the [domain integration rules](../domain-guidance.md) for glossary updates and
+   the single batched ADR offer.
 
 For later UI features, replace the brand/direction/guide-creation steps with reading
 and applying DESIGN.md. Propose shared additions only when needed. Reopen visual

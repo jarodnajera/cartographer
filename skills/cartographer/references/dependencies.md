@@ -48,7 +48,8 @@ revision used in evaluation.
 | Role | Skills | When useful |
 | --- | --- | --- |
 | Required | `grilling` | Phase 1 specification and Phase 2 feature discovery |
-| Recommended for Phase 2 | `codebase-design`, `domain-modeling` | Architecture decisions and consistent domain language |
+| Recommended for Phase 1/2 vocabulary | `domain-modeling` | Clarify terms with Cartographer document-timing overrides |
+| Recommended for Phase 2 architecture | `codebase-design` | Interfaces, responsibilities and test seams |
 | Recommended for Phase 3 as needed | `writing-for-agents`, `wizard` | Agent-facing documentation and human-only procedures |
 | Recommended for Phase 2 exploration | `prototype` | Bounded UI or logic experiments |
 | Phase 3 and 4b behavior implementation | `tdd` | Test-first behavior at agreed seams |
@@ -91,17 +92,25 @@ Read their installed instructions and supporting files. The
 sources, working-tree review, delegation availability, diagnosis-only work in 4a,
 and wizard execution/Git actions. `tdd` uses seams agreed in Phase 2a and calls for
 `codebase-design` when their design is unresolved; both use docs/GLOSSARY.md here.
-Phase 4 and the expanded TDD integration are active workflow instructions. Their
-behavioral evaluation remains pending; availability is not evidence of a passed run.
+Phase 4 and the expanded TDD integration are active instructions. Test5 exercised
+scoped review/remediation and browser re-checks; full diagnosis/red-green remediation
+and feature completion are not established by that run.
 
 Phase 2b selects structure and appearance separately, using rendered directions
 for the first substantial UI feature. Phase 3 implements the approved style and
 compares desktop/mobile screenshots. Screenshot critique requires an available
 permitted browser, such as Playwright with Chromium; unavailable rendering is
-reported explicitly. Browser installation is not automatic. This revised visual
-workflow has not yet been behaviorally evaluated.
+reported explicitly. Browser installation is not automatic. Test5 exercised user
+selection from visual directions; agent screenshot critique and full design parity
+were not established during that design session.
 
 ## Compatibility evidence
+
+[Test5's publication notes](../../../tests/test5/README.md) summarize the newer
+manual integration run. Its [browser evidence](../../../tests/test5/docs/plans/evidence/phase4-browser-recheck.json)
+records selected account-state checks after Playwright MCP became available.
+These results do not establish hosted Auth, full accessibility/design parity,
+original-defect reproduction, or the final full-feature completion loop.
 
 The earlier bundled Cartographer workflow used:
 
@@ -146,3 +155,18 @@ The former references/grilling/ folder, if still present during migration, is
 not a runtime dependency or fallback. Its license/provenance stay with that copy
 until removal. The installed skill's upstream distribution maintains its notices;
 this document preserves the source acknowledgement and compatibility reference.
+
+## Domain and browser readiness
+
+Use the [domain integration rules](domain-guidance.md) when applying domain-modeling
+in Phase 1 or later: retain docs/GLOSSARY.md, optional observed code mappings,
+acceptance-first population, and authorized batched ADR recording. No additional
+grill-with-docs dependency is needed.
+
+Visual verification requires a working permitted real browser. Check local-page
+opening and screenshot capture at the start of Phase 2b, before rendering options;
+repeat if the environment changes before Phase 3/4 checks. Playwright with Chromium
+is one supported route where allowed; use the host's browser mechanism when
+required. Report unavailable tooling before proceeding with explicitly unchecked
+previews. Tool installation and permissions remain subject to user scope and
+client controls.

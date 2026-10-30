@@ -1,0 +1,259 @@
+{
+  "recorded_at": "2026-10-30T14:42:56.100230-07:00",
+  "baseline": "docs/plans/evidence/phase3-start.json",
+  "fixed_head": "03c130eb7c3cd7428980034b6b022b4ada1d3f83",
+  "scope": "tests/test5 only; first account frontend/readiness slice, full milestone/feature incomplete",
+  "user_steering": "Defer live backend checks; prioritize frontend and readiness for Supabase/backend implementation.",
+  "exclusions": "Dependencies/build/cache, environment secrets, baseline/checkpoint records and append-only conversation excluded from comparison. Public env examples included. No commit baseline created; target remains untracked.",
+  "checks": {
+    "unit": "14 passed (account/config seams with external fakes)",
+    "build": "vue-tsc and production Vite build passed on Node 24.22.1",
+    "integration": "3 skipped explicitly with RUN_SUPABASE_INTEGRATION=0; no live backend proof",
+    "production_preview_controller": "excluded from generated production JS",
+    "package_lock": "root dependency and engine declarations match package.json",
+    "local_markdown_links": "20 files checked; local targets present after checkpoint creation",
+    "environment_ignore": "local and integration-local env paths ignored by Git",
+    "http": "development review and compiled Vue modules served successfully",
+    "toml": "local template parsed; startup not verified"
+  },
+  "unverified": [
+    "Browser rendering, interactions, focus, fonts, mobile screenshots and parity: permitted browser unavailable",
+    "SQL application, auth hooks/triggers, verification/recovery callbacks, real two-user RLS",
+    "Record CRUD, Today/digests and export/deletion not implemented"
+  ],
+  "review": "User hands-on frontend review requested. Separate Standards and Spec source passes pending; no clean/full-feature verdict.",
+  "added": [
+    {
+      "path": "lancealot/.env.example",
+      "sha256": "9424a41d5bb90f056a856dce715d80b6c53f3663713b5101f6357f18e6fc392a",
+      "bytes": 197
+    },
+    {
+      "path": "lancealot/.env.integration.example",
+      "sha256": "c12246b76bec8b51929e913d19861d00f1854578722bd77cd02f1fc361bb9122",
+      "bytes": 315
+    },
+    {
+      "path": "lancealot/src/accounts/runtime.ts",
+      "sha256": "1ff3169538b84708440f3d3c7b699de92474cbed53e43866d3a7295dffdf954e",
+      "bytes": 1006
+    },
+    {
+      "path": "lancealot/src/accounts/service.test.ts",
+      "sha256": "b0a8ff3efed9730fd4bef52a8656dfdefb9d688517d01b0fc3692c938548e027",
+      "bytes": 4692
+    },
+    {
+      "path": "lancealot/src/accounts/service.ts",
+      "sha256": "f54312708e7df36b1ec70b659a8e9f178b84911cc383e2791fa79469589fab6d",
+      "bytes": 2961
+    },
+    {
+      "path": "lancealot/src/accounts/supabase-gateway.ts",
+      "sha256": "6eefd84a3afad7f8344815a02173c4f0cb4b590dd680fe115e4d9f74b4d99dc8",
+      "bytes": 2783
+    },
+    {
+      "path": "lancealot/src/accounts/types.ts",
+      "sha256": "e27bfcd1199fa7c6bdbef032b64e97b1a02a8cc5baeef5ded1143de4d34d61c9",
+      "bytes": 922
+    },
+    {
+      "path": "lancealot/src/assets/fonts/Manrope.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "bytes": 164700
+    },
+    {
+      "path": "lancealot/src/assets/fonts/OFL.txt",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "bytes": 4387
+    },
+    {
+      "path": "lancealot/src/components/UiIcon.vue",
+      "sha256": "9d38ed86acefd7b8f0c45f27eadfbacfcfbcdf6c27194a4bb103e384c30ef34a",
+      "bytes": 746
+    },
+    {
+      "path": "lancealot/src/lib/config.test.ts",
+      "sha256": "6a12bface576b8de38e362c7f02cebc8be08d3ca42fee477a419f3fd7877694d",
+      "bytes": 1047
+    },
+    {
+      "path": "lancealot/src/lib/config.ts",
+      "sha256": "f6d6d32e78da6f75ce340379550c163f21e1f6abd27749f00e7eefd9b1c65f9d",
+      "bytes": 1163
+    },
+    {
+      "path": "lancealot/src/router/index.ts",
+      "sha256": "11e0ceaea3ccc27c27a3a7c93e01b236eea01e2cf2dabeb23b22ce37c0b20da4",
+      "bytes": 1636
+    },
+    {
+      "path": "lancealot/src/styles/app.css",
+      "sha256": "e6b23d13eb8c38383a99f1cf9b551ba700aca1ad2b2bd7be2dcd23436fc4f257",
+      "bytes": 13218
+    },
+    {
+      "path": "lancealot/src/views/AuthView.vue",
+      "sha256": "c0b4046f54dec67819681de5d8ad1754786a5fcabdd76d069d81926e9bf9c4f9",
+      "bytes": 10861
+    },
+    {
+      "path": "lancealot/src/views/UiPreviewView.vue",
+      "sha256": "ad828d13e56ee27373e0edee213688e99d73e792b899aa91306bc5383b8d3924",
+      "bytes": 1809
+    },
+    {
+      "path": "lancealot/src/views/WorkspaceView.vue",
+      "sha256": "2fd3cbabb40579b955917430fa29d819ed05ce68768b89a95f6bbf5ce159a223",
+      "bytes": 10262
+    },
+    {
+      "path": "lancealot/supabase/config.toml",
+      "sha256": "cba5a7eb1bbeb6f502e199f06ec4b15f10f3087f405199ee6730983c7a50f8ff",
+      "bytes": 777
+    },
+    {
+      "path": "lancealot/supabase/migrations/202610300001_private_accounts.sql",
+      "sha256": "30011691989d37b780f77d88a7cb5f3e5a3265046cf3a796be90e0566fe4ce68",
+      "bytes": 4108
+    },
+    {
+      "path": "lancealot/supabase/seed.sql",
+      "sha256": "50d7ff74b6284a2943dde7d3193ff406552fb123205b85ab14b6936bfb63b455",
+      "bytes": 209
+    },
+    {
+      "path": "lancealot/tests/integration/ownership.test.ts",
+      "sha256": "18406e758c7ac578cfe2f37f728e753991f6b7d397754b3a5757427fd276fc40",
+      "bytes": 3317
+    },
+    {
+      "path": "lancealot/vitest.config.ts",
+      "sha256": "be7a9a65cd5d36e0d8c8a2584e3cb1feb2e4eb3c68c7050ca946cb05a3b6ec65",
+      "bytes": 140
+    },
+    {
+      "path": "lancealot/vitest.integration.config.ts",
+      "sha256": "99a186111382867766e02d60426c4f14bfb4fe7457ac15c0de04a1937b484203",
+      "bytes": 381
+    }
+  ],
+  "changed": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "b8e1ddda64c48d7bc63c04d35130b64ce111039132a46499be2bfcdb971d9b7c",
+      "bytes": 3017,
+      "baseline_sha256": "3b37d1145d4f690c3cfc8c947f127c8a5269dd3021e27a5df3f09789f95be6fe"
+    },
+    {
+      "path": "HANDOVER.md",
+      "sha256": "e16b1b9258073e9b0cc653b03f91ac78c5498276859f9edf0d6eea3790bcae48",
+      "bytes": 7779,
+      "baseline_sha256": "9818d4a12920be581f3524d7cb5f6c7ddc0c0788beddcd138ac26a06693d7e63"
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "70cde23f5854347a3a936596b05233c61408fcbc64953c158ad216fccbb8854d",
+      "bytes": 35229,
+      "baseline_sha256": "cdbfecd37a59b337b617223c097a9fe1a679c7788b90883c068a2b5b14a7b47a"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "8eecce2bd2e5f26b0ec3bbbeb3ea9c62048b492dd7e48e6bcaaa5b541f729861",
+      "bytes": 2807,
+      "baseline_sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade"
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "sha256": "cb8216ba73899fa6f16a03d6addc413ec9c30ad3f0bce3cc254e46d59c54fda5",
+      "bytes": 9247,
+      "baseline_sha256": "b35a46ec74113d0d6095d96e963bee817fb7e8f884c7ab9e0fd97b387834d838"
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "sha256": "85d8984dfe5a6d284448c924858c28d7d8f3913c388e6b5adbc44195db3d7101",
+      "bytes": 6487,
+      "baseline_sha256": "bfe3e8da1c76a94e620e32b78d4eae5e14f7bd2c8002889d4bacc499dbd787e8"
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "sha256": "29fd116ad8d82986b1231fbedd6d99696f0cf010b02ae2ed5fb06dd36da3378f",
+      "bytes": 3614,
+      "baseline_sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "705b3f6ed05850e173a725be133638a7f26a6f3ff6511bce04ef0662af6a28bd",
+      "bytes": 3129,
+      "baseline_sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade"
+    },
+    {
+      "path": "docs/plans/export-and-account-deletion.md",
+      "sha256": "c431f8b28e1903f12d74c1d94ee083a20a7ef676039418b8a20a76fa6311ca25",
+      "bytes": 9472,
+      "baseline_sha256": "d9d78887ab9f94c7588a48528ec91ad919cd42402170ce35cbf5b55ad64efe99"
+    },
+    {
+      "path": "docs/plans/private-accounts-and-project-tracking.md",
+      "sha256": "92a2ae9de804bddf4a480614e5dde025dcf1cc06cc50a76fa7e4200d72a782c1",
+      "bytes": 8683,
+      "baseline_sha256": "f3560de8b923f8d02560de71de27d7562bcbe356563ee370d55bdd685791c192"
+    },
+    {
+      "path": "docs/plans/today-and-daily-digest.md",
+      "sha256": "8ddda236a39b8a3e92083e4aa2a09c36dedd7c1ab4351de09fdffe28f771c738",
+      "bytes": 9128,
+      "baseline_sha256": "b0dfe878bae8e717f22e2139813e9bdcec130122392c3819eff13ef74494ce25"
+    },
+    {
+      "path": "lancealot/.gitignore",
+      "sha256": "db7c44987014bb0b779486ffa94d9492e735a2afd40a6610fd75f7e5d648bba4",
+      "bytes": 553,
+      "baseline_sha256": "aaf850032ebd5ba963ab779a087807f817e1bcb5d49350d2087f12f591ca82ef"
+    },
+    {
+      "path": "lancealot/README.md",
+      "sha256": "357b6ad36959e2d309e93fc0f5f3b0efe3dc6ce4e1f3541f5ffe4b97619ed363",
+      "bytes": 1493,
+      "baseline_sha256": "26089954220c083c1594a5124e1229a47fb3b9fe0dc2ff3e77998ac4fa1f6757"
+    },
+    {
+      "path": "lancealot/index.html",
+      "sha256": "1854b4c391e59b629c5677edeb4e0758577026ac0abf0dcd93b58e8eb3f52fbf",
+      "bytes": 324,
+      "baseline_sha256": "f2174e2a35991fdccb2a9f2c336d52c5f09244fa86ca7baaec523754d083a6ef"
+    },
+    {
+      "path": "lancealot/package-lock.json",
+      "sha256": "4d1005fd708c4327799029bf1777a23ee1d579ad1969fa1bbb9f486a4dddcdf1",
+      "bytes": 119315,
+      "baseline_sha256": "e264af2be9ce350d67170aefdf897516b87a45c3bbea41eec05da649a0d3a58e"
+    },
+    {
+      "path": "lancealot/package.json",
+      "sha256": "d61979958f833534db33e24a323a1b8ded8f19c647593c7bfe4ce7664ef97197",
+      "bytes": 921,
+      "baseline_sha256": "88bf4d28d8e423c8e98d883690eb5f7de188736f1da3c91ebaaf1825c0aa85e6"
+    },
+    {
+      "path": "lancealot/src/App.vue",
+      "sha256": "4f1c479448504642f1d63bb96d46b2047f0b393c2f8d6dcfa133df67dc69b369",
+      "bytes": 603,
+      "baseline_sha256": "bdafe70baf73a040d432b574108ce0e11823a3c1c1cc8bdfe01d118d6ff7d35a"
+    },
+    {
+      "path": "lancealot/src/main.ts",
+      "sha256": "ec51efe5800a0cbf8d67b049a20187c3321b5a39ec45b18b637e9b381b3a6aa7",
+      "bytes": 162,
+      "baseline_sha256": "50cb9f18b1c7115799ae456f0d0038840278b49ea520b5549d468ec76c248fb9"
+    },
+    {
+      "path": "lancealot/tsconfig.node.json",
+      "sha256": "1cceff3aee2382ad9361ef03cfcfef61352692a69cd057a5f29f63d20659628a",
+      "bytes": 1025,
+      "baseline_sha256": "f3d48b85104c3b01aa68ee8758762eb6e90cb09677251f6b7b4b53360e37bde1"
+    }
+  ],
+  "removed": []
+}

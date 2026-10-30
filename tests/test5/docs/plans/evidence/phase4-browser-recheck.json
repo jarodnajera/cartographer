@@ -1,0 +1,79 @@
+{
+  "recorded_at": "2026-10-30T15:54:18.513502-07:00",
+  "tool": "Playwright MCP (mcp__playwright), explicitly selected by user; not built-in Browser",
+  "connection": "Working: navigation, real browser evaluation, clicks and screenshots executed.",
+  "initial_navigation_error": "net::ERR_CONNECTION_REFUSED: local app was not running on 127.0.0.1:5173. Resolved by starting Vite. This was not a Playwright MCP startup failure.",
+  "server": {
+    "url": "http://127.0.0.1:5173/",
+    "session_id": 57990,
+    "node": "24.22.1",
+    "sandbox_start": "listen EPERM; approved escalated startup succeeded"
+  },
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "observations": {
+    "SP-2_verification_preview": "Expired verification displays Email and enabled Resend verification email; fictional alex@example.test submission shows verification-specific feedback, no recovery action. Both widths passed.",
+    "SP-2_recovery_preview": "Expired reset shows Recovery link expired, zero password fields, recovery-request link; clicking reaches forgot-password preview and Send recovery link. Both widths passed.",
+    "real_recovery_no_callback": "Real /reset-password without recovery context shows expired state and no password form; clicking routes to actual /forgot-password. Both widths passed. This is not proof of actual provider token-expiry handling.",
+    "SP-1_real_unconfigured_route": "Actual /workspace navigation redirects to /sign-in with service-not-ready explanation and disabled sign-in. Both widths passed.",
+    "SP-1_configured_denied_unavailable": "BLOCKED: requires the deferred isolated backend/account failure paths. No injected identity or preview state was used as redirect proof.",
+    "responsive": "No document horizontal overflow observed in checked account states. Five captured screenshots visually inspected; full design/accessibility parity not claimed.",
+    "font": "Manrope document.fonts check true on desktop verification page.",
+    "console": "Saved all-session error-level report: 0 errors; report also lists 0 warnings.",
+    "backend_network": "Filtered Supabase/auth-v1/rest-v1 request list empty; no live backend tests run."
+  },
+  "screenshots": [
+    {
+      "path": "sp2-verification-desktop.png",
+      "sha256": "aa1521e50a50c0731fb3f1ee1243998a675eb8064e089ba50b8101861016cc98"
+    },
+    {
+      "path": "sp2-recovery-desktop.png",
+      "sha256": "5b4ae2bf72bdcd4abc40816588cdcc0eaca46e9e2bdfa16dd1776b07f9cc4541"
+    },
+    {
+      "path": "sp2-verification-mobile.png",
+      "sha256": "1b8f98b6ddba0263e9b60122597e0437567ae1896fe8c2d378cfbbae232d4cb7"
+    },
+    {
+      "path": "sp2-recovery-mobile.png",
+      "sha256": "96db23a30b94875c7c2932a28da002347d0b3159e1be7b60d76487aa7ead4b78"
+    },
+    {
+      "path": "sp1-unconfigured-desktop.png",
+      "sha256": "1530a1df0c4e6606d9306385d46c5206d6b6a17898c9401dffab79b85ec37422"
+    },
+    {
+      "path": "sp1-unconfigured-mobile.png",
+      "sha256": "79e876af8fec138e7392693e0406d8c31b511a95d18b72bd99a55688ce903623"
+    }
+  ],
+  "artifacts": [
+    "playwright-console-errors.txt",
+    "playwright-backend-requests.txt"
+  ],
+  "scope_limits": [
+    "Preview verification submission is fictional; no email delivery or provider expiry proof.",
+    "Configured-account denied/unavailable/auth-change cases remain blocked by explicit backend deferral.",
+    "No full accessibility, keyboard, workspace or design-parity verdict.",
+    "User accepted the frontend fixes; full-feature acceptance remains outstanding."
+  ],
+  "application_source_changed": false,
+  "source_evidence": "Source hashes match phase4b-account-state-fixes.json; no need to rerun unchanged unit/build checks for documentation/browser-only work.",
+  "subsequent_user_acceptance": {
+    "date": "2026-10-30 America/Los_Angeles",
+    "verbatim": "looking good!",
+    "scope": "Acceptance of corrected frontend screens; detailed manual check coverage not stated.",
+    "SP-2": "Resolved for scoped UI behavior; provider behavior not established.",
+    "SP-1": "Configured-account verification remains blocked by deferred backend.",
+    "whole_feature_complete": false
+  }
+}

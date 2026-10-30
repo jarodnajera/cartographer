@@ -1,0 +1,403 @@
+{
+  "recorded_date": "2026-10-30 America/Los_Angeles",
+  "head": "03c130eb7c3cd7428980034b6b022b4ada1d3f83",
+  "scoped_status": "?? tests/test5/\n",
+  "limit": "Target is untracked; compare actual file inventory/hashes, not commit-only diffs. Dependencies/build output and environment files excluded.",
+  "files": [
+    {
+      "path": ".agents/skills/code-review/SKILL.md",
+      "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+      "bytes": 6721
+    },
+    {
+      "path": ".agents/skills/code-review/agents/openai.yaml",
+      "sha256": "8229ca854e11dc8e6aef2131ee03f31fb1561cf905fab9ccc325180cf3331352",
+      "bytes": 100
+    },
+    {
+      "path": ".agents/skills/codebase-design/DEEPENING.md",
+      "sha256": "f3dd099ce99289bd213914d8ee3e2429b78309c3957ca4583f7659551b1d53c1",
+      "bytes": 2553
+    },
+    {
+      "path": ".agents/skills/codebase-design/DESIGN-IT-TWICE.md",
+      "sha256": "c222ab5a82e0405672eb9062d62496139a08828e45d07fc5f18e4952c10fac1a",
+      "bytes": 2699
+    },
+    {
+      "path": ".agents/skills/codebase-design/SKILL.md",
+      "sha256": "2c20617f87ec8af6a434859f381b2f061a69b530444e74eb39e78bb016a6d1e2",
+      "bytes": 6446
+    },
+    {
+      "path": ".agents/skills/codebase-design/agents/openai.yaml",
+      "sha256": "edebc9e4fcfe102114012575eaa9600b9b5fd08c311664f389c36e7bc717740f",
+      "bytes": 102
+    },
+    {
+      "path": ".agents/skills/diagnosing-bugs/SKILL.md",
+      "sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+      "bytes": 8664
+    },
+    {
+      "path": ".agents/skills/diagnosing-bugs/agents/openai.yaml",
+      "sha256": "3e430dbe4334a87597488c060cb3dc3786bb00c9182877d6f5ec41f62490e90b",
+      "bytes": 103
+    },
+    {
+      "path": ".agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh",
+      "sha256": "35103539fc36873eea36074769ad454f9379d6fc8b2dc0e26ce987fd3bfe5503",
+      "bytes": 1316
+    },
+    {
+      "path": ".agents/skills/domain-modeling/ADR-FORMAT.md",
+      "sha256": "944c92aa790e8fbdc9199640b170979abb8a34ba8d0fe18c2a01a63bce140ca0",
+      "bytes": 2733
+    },
+    {
+      "path": ".agents/skills/domain-modeling/GLOSSARY-FORMAT.md",
+      "sha256": "21dcc40cdec8e151a829b98ab1517c1867bc444e3665134a98c6983411996801",
+      "bytes": 2300
+    },
+    {
+      "path": ".agents/skills/domain-modeling/SKILL.md",
+      "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+      "bytes": 3346
+    },
+    {
+      "path": ".agents/skills/domain-modeling/agents/openai.yaml",
+      "sha256": "f6bf2aa996c6e6f53fdd0708e18a0d16a56aed8322cca59fedbe3c0d2c75f06b",
+      "bytes": 101
+    },
+    {
+      "path": ".agents/skills/frontend-design/SKILL.md",
+      "sha256": "c3d0d3ea592ad4f01215009a7ebcf7b7d948f568c15dd77e24ff7172c8643f2b",
+      "bytes": 9389
+    },
+    {
+      "path": ".agents/skills/grilling/SKILL.md",
+      "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+      "bytes": 2077
+    },
+    {
+      "path": ".agents/skills/grilling/agents/openai.yaml",
+      "sha256": "1411d7df7d99b7e621a1ff8283c8133cc2464be63d064e52d8ce169c6800ee9b",
+      "bytes": 113
+    },
+    {
+      "path": ".agents/skills/handoff/SKILL.md",
+      "sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+      "bytes": 940
+    },
+    {
+      "path": ".agents/skills/handoff/agents/openai.yaml",
+      "sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
+      "bytes": 141
+    },
+    {
+      "path": ".agents/skills/prototype/LOGIC.md",
+      "sha256": "f61c7d249e786a79ef289018901c348271e1798dd0b0bc5607b5c6f4d4a01ab9",
+      "bytes": 6036
+    },
+    {
+      "path": ".agents/skills/prototype/SKILL.md",
+      "sha256": "714de632d116bb73f65cdb5a882db15b9369a6713b9a47c0fad827848f0bfbe3",
+      "bytes": 2931
+    },
+    {
+      "path": ".agents/skills/prototype/UI.md",
+      "sha256": "723211e878acbc7b6ff09755263f3295cde724ba902ff0064da41eed51d45ad3",
+      "bytes": 6913
+    },
+    {
+      "path": ".agents/skills/prototype/agents/openai.yaml",
+      "sha256": "5af65e43ab41a350436697b81e27b7f848d36782043b73c322bb2c9fa9cc55dc",
+      "bytes": 100
+    },
+    {
+      "path": ".agents/skills/tdd/SKILL.md",
+      "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+      "bytes": 3629
+    },
+    {
+      "path": ".agents/skills/tdd/agents/openai.yaml",
+      "sha256": "ea6f01cf1b8c06a4b0f5b649d74b1b8ce8685e72af1b38d70d877693e092af0b",
+      "bytes": 87
+    },
+    {
+      "path": ".agents/skills/tdd/mocking.md",
+      "sha256": "3ceb807fdf4a47d6a93d4d9a891e5ba6d362a6247bd08adc451feebfc17361ef",
+      "bytes": 1481
+    },
+    {
+      "path": ".agents/skills/tdd/tests.md",
+      "sha256": "859f9e592c188fda4fc7277dd180e4ce9c7a2e13f6efe1f6f29eccc9d28c106a",
+      "bytes": 2214
+    },
+    {
+      "path": ".agents/skills/wizard/SKILL.md",
+      "sha256": "bdf31d48211ea559878f95a4f344aeabf8d85897488ba564382bab0b000daac1",
+      "bytes": 4123
+    },
+    {
+      "path": ".agents/skills/wizard/agents/openai.yaml",
+      "sha256": "98f44d682d58e262f160dc59a8befc365e0aa65820dd0261864af26aa8e59d83",
+      "bytes": 96
+    },
+    {
+      "path": ".agents/skills/wizard/template.sh",
+      "sha256": "6566f147299bc6f1d941e64591ed04385416d543e11f96f564c7228f5018d0ed",
+      "bytes": 9498
+    },
+    {
+      "path": ".agents/skills/writing-for-agents/SKILL-MECHANICS.md",
+      "sha256": "c768e6307c7c10728c401c213f2c4ba71c542127eeb7ad2956aabd15a0fa0059",
+      "bytes": 2629
+    },
+    {
+      "path": ".agents/skills/writing-for-agents/SKILL.md",
+      "sha256": "551adca942227b44192edba88acd4e8db911f0121ce58ad16944ccf6a896a74a",
+      "bytes": 10886
+    },
+    {
+      "path": ".agents/skills/writing-for-agents/agents/openai.yaml",
+      "sha256": "eacb24b2a618cfb81dacb0416f4fdd75ddf3a8060f8ddb99aae1b1e301907e4b",
+      "bytes": 102
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "3b37d1145d4f690c3cfc8c947f127c8a5269dd3021e27a5df3f09789f95be6fe",
+      "bytes": 2786
+    },
+    {
+      "path": "CONVERSATION.md",
+      "sha256": "4d4094edb276eb93e8ccfac4710a5db9fc2f3886268feabd3447c14c22a15360",
+      "bytes": 59752
+    },
+    {
+      "path": "HANDOVER.md",
+      "sha256": "9818d4a12920be581f3524d7cb5f6c7ddc0c0788beddcd138ac26a06693d7e63",
+      "bytes": 18738
+    },
+    {
+      "path": "SPEC.md",
+      "sha256": "cdbfecd37a59b337b617223c097a9fe1a679c7788b90883c068a2b5b14a7b47a",
+      "bytes": 34952
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade",
+      "bytes": 95
+    },
+    {
+      "path": "docs/DESIGN.md",
+      "sha256": "b35a46ec74113d0d6095d96e963bee817fb7e8f884c7ab9e0fd97b387834d838",
+      "bytes": 8462
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "sha256": "bfe3e8da1c76a94e620e32b78d4eae5e14f7bd2c8002889d4bacc499dbd787e8",
+      "bytes": 6199
+    },
+    {
+      "path": "docs/RUNBOOK.md",
+      "sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade",
+      "bytes": 95
+    },
+    {
+      "path": "docs/TESTING.md",
+      "sha256": "46a8106e0fad32e62a5e14c943fd53c4794c5b458e9519f280dc0c0c47698ade",
+      "bytes": 95
+    },
+    {
+      "path": "docs/adr/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/adr/0001-supabase-service-boundaries.md",
+      "sha256": "fe3d5dadd104734c30deb192718e86e93a90a846bb366301ce90a20795519ba0",
+      "bytes": 1773
+    },
+    {
+      "path": "docs/adr/0002-resumable-account-deletion.md",
+      "sha256": "b0c706eef14f3ced2ab223887d91b1b5ebdfb73e21b084086f35530696119f8c",
+      "bytes": 1551
+    },
+    {
+      "path": "docs/design/previews/FONT-SOURCES.md",
+      "sha256": "b0f2bfb468e77dc51890e8c6f08a010eeb135fcc0d56e543f5e77571ab388124",
+      "bytes": 1679
+    },
+    {
+      "path": "docs/design/previews/README.md",
+      "sha256": "bdab9ed0ad939c5512ffdb5d802f04d42a379b2240a80dc1ce87d303560500de",
+      "bytes": 6875
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/InstrumentSans-OFL.txt",
+      "sha256": "9e27a72ed30eb49a08678f6a5d6ed98ec7ba5368f541637ee0683ec9134ef966",
+      "bytes": 4403
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/InstrumentSans.ttf",
+      "sha256": "b24f1812584816958afcf22e22d08e44318c5e51651e25d2438efdde389b33b1",
+      "bytes": 194336
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/Manrope-OFL.txt",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "bytes": 4387
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/Manrope.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6",
+      "bytes": 164700
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/PublicSans-OFL.txt",
+      "sha256": "157a9e77f7580246e97c769490e2e977ae94399f9d30f4556015c41fe8c28bac",
+      "bytes": 4390
+    },
+    {
+      "path": "docs/design/previews/assets/fonts/PublicSans.ttf",
+      "sha256": "d75a7dc1a27eb9e336d5b33f55489d2ecb5621bf694d5c43b2415bce2ca830a8",
+      "bytes": 103316
+    },
+    {
+      "path": "docs/design/previews/flows.css",
+      "sha256": "7997f9ba19342baec66238935c42ed90abf3e44ea95bcd849fe48379f3f47f4b",
+      "bytes": 7595
+    },
+    {
+      "path": "docs/design/previews/flows.js",
+      "sha256": "9357f652cad27cd77d0084f868dcd11a5df119a5ceb7d35b5bb7c196faee25fd",
+      "bytes": 33549
+    },
+    {
+      "path": "docs/design/previews/index.html",
+      "sha256": "92d9ffa3e49fed3a36f74073d9eee95f8733db6adb0288fdeb6f313abb23f346",
+      "bytes": 40821
+    },
+    {
+      "path": "docs/design/structure-options.md",
+      "sha256": "eeb6d99055a7a920e4388f37a11a9241bd61282fdc6a11e70d8036786fc13a92",
+      "bytes": 6977
+    },
+    {
+      "path": "docs/design/visual-directions.md",
+      "sha256": "2356f22036ce7bfc56b3bfbd663c8808feb228c6e0ea179543dca36b20c1cf43",
+      "bytes": 4642
+    },
+    {
+      "path": "docs/plans/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/plans/PLANS.md",
+      "sha256": "c3562c5778e43631c4ff5a09c1b572aa29931f796a620e0d9c884eb7ac374cab",
+      "bytes": 9765
+    },
+    {
+      "path": "docs/plans/export-and-account-deletion.md",
+      "sha256": "d9d78887ab9f94c7588a48528ec91ad919cd42402170ce35cbf5b55ad64efe99",
+      "bytes": 9431
+    },
+    {
+      "path": "docs/plans/private-accounts-and-project-tracking.md",
+      "sha256": "f3560de8b923f8d02560de71de27d7562bcbe356563ee370d55bdd685791c192",
+      "bytes": 9695
+    },
+    {
+      "path": "docs/plans/today-and-daily-digest.md",
+      "sha256": "b0dfe878bae8e717f22e2139813e9bdcec130122392c3819eff13ef74494ce25",
+      "bytes": 9087
+    },
+    {
+      "path": "docs/research/.gitkeep",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "lancealot/.gitignore",
+      "sha256": "aaf850032ebd5ba963ab779a087807f817e1bcb5d49350d2087f12f591ca82ef",
+      "bytes": 396
+    },
+    {
+      "path": "lancealot/.vscode/extensions.json",
+      "sha256": "70d56b550e796e3ea92922763ae03037a1a94596fda9d737982c75f6a20e88dd",
+      "bytes": 39
+    },
+    {
+      "path": "lancealot/.vscode/settings.json",
+      "sha256": "2c8a3727b6830aedc697908aedabdcca2815a6efa54cb66ea05b67cb138c9ea5",
+      "bytes": 413
+    },
+    {
+      "path": "lancealot/README.md",
+      "sha256": "26089954220c083c1594a5124e1229a47fb3b9fe0dc2ff3e77998ac4fa1f6757",
+      "bytes": 1370
+    },
+    {
+      "path": "lancealot/env.d.ts",
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "bytes": 38
+    },
+    {
+      "path": "lancealot/index.html",
+      "sha256": "f2174e2a35991fdccb2a9f2c336d52c5f09244fa86ca7baaec523754d083a6ef",
+      "bytes": 329
+    },
+    {
+      "path": "lancealot/package-lock.json",
+      "sha256": "e264af2be9ce350d67170aefdf897516b87a45c3bbea41eec05da649a0d3a58e",
+      "bytes": 93955
+    },
+    {
+      "path": "lancealot/package.json",
+      "sha256": "88bf4d28d8e423c8e98d883690eb5f7de188736f1da3c91ebaaf1825c0aa85e6",
+      "bytes": 690
+    },
+    {
+      "path": "lancealot/public/favicon.ico",
+      "sha256": "db74ab0b78338c1f778f8398c45f4103c99aea0e845a3118a7750b4eeafd3445",
+      "bytes": 4286
+    },
+    {
+      "path": "lancealot/src/App.vue",
+      "sha256": "bdafe70baf73a040d432b574108ce0e11823a3c1c1cc8bdfe01d118d6ff7d35a",
+      "bytes": 232
+    },
+    {
+      "path": "lancealot/src/main.ts",
+      "sha256": "50cb9f18b1c7115799ae456f0d0038840278b49ea520b5549d468ec76c248fb9",
+      "bytes": 90
+    },
+    {
+      "path": "lancealot/tsconfig.app.json",
+      "sha256": "92496d0db20bb707be8b697a9dc316c7ded1011f8a9998a472c89f3e612822f2",
+      "bytes": 594
+    },
+    {
+      "path": "lancealot/tsconfig.json",
+      "sha256": "3dd280df663fb5fbe9e85e5981289d27a7120b97a852827dd16e0ac296836d1b",
+      "bytes": 139
+    },
+    {
+      "path": "lancealot/tsconfig.node.json",
+      "sha256": "f3d48b85104c3b01aa68ee8758762eb6e90cb09677251f6b7b4b53360e37bde1",
+      "bytes": 1004
+    },
+    {
+      "path": "lancealot/vite.config.ts",
+      "sha256": "4fd60c54e9a6b350a8087919902a5b480db05b4eb4864fe800daa10761dbd5d4",
+      "bytes": 380
+    },
+    {
+      "path": "skills-lock.json",
+      "sha256": "e4be57a3d46d996c2899c177fb47d65539ce8d40077ebfd8ac3d1bbac7de06e5",
+      "bytes": 2494
+    }
+  ]
+}

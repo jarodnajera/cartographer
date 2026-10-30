@@ -1,75 +1,127 @@
-# cartographer
+# Cartographer
 
-Skill to map out your project
+A skill for turning a new idea or existing software project into an accepted
+specification, focused feature plans, and an iterative build/review workflow.
+Cartographer supplies prompts, documentation templates, and phase routing for
+coding agents; there is no standalone scaffolding CLI yet.
+
+## Get started
+
+From a local checkout, install Cartographer through the
+[skills CLI](https://github.com/vercel-labs/skills#install-a-skill):
+
+```sh
+npx skills@latest add ./skills/cartographer
+```
+
+Choose your agent and installation scope. For use across projects, choose global
+scope (or add -g). Install the required companion below, then start in your target
+project with:
+
+```text
+Use $cartographer to establish the foundation for this project.
+My idea is: [describe the problem and intended users].
+Help me clarify it and create the project foundation.
+Do not implement application code yet.
+```
+
+Use your agent's skill-invocation syntax if it differs. For an existing project,
+ask Cartographer to map the codebase and identify documentation/planning gaps.
+Foundation discovery preserves existing files and settled requirements.
+
+## Workflow
+
+| Phase | Outcome |
+| --- | --- |
+| 1 — Foundation | Documentation scaffold, accepted SPEC.md, seeded domain glossary, ADR assessment, and setup handoff |
+| 2a — Feature planning | Bounded scope, agreed test seams, milestones, verification strategy and review points |
+| 2b — Design | Selected structure and rendered visual direction, DESIGN.md and approved styled preview; skipped for non-UI work |
+| 3 — Implementation | Authorized milestone delivery, relevant tests, maintained documentation and a concrete review handoff |
+| 4a — Review | Hands-on feedback, separate Standards/Spec assessments, diagnosis and proposed remediation |
+| 4b — Remediation | Authorized fixes, re-verification and user re-checks until explicit acceptance |
+
+After acceptance, return to Phase 2a for the next selected feature. Document
+acceptance and tool permission are separate; neither authorizes deployment or
+spending by itself. Keep multiple features reviewable rather than implementing
+all plans in one uninterrupted pass unless requested.
 
 ## Install companion skills
 
-Install companion skills through the interactive `npx` installer for Codex,
-Claude Code, or another supported agent:
+Use the interactive installer rather than also installing duplicate marketplace
+copies:
 
 ```sh
 npx skills@latest add mattpocock/skills
 ```
 
-Choose your target agent and select the skills you need:
+| Role | Skills |
+| --- | --- |
+| Required for interviews | grilling |
+| Recommended for domain clarification in Phases 1/2 | domain-modeling |
+| Recommended for Phase 2 interfaces and test seams | codebase-design |
+| Recommended for Phase 2 structure/logic exploration | prototype |
+| Phase 3/4b behavior suited to test-first work | tdd |
+| Agent-facing documentation | writing-for-agents |
+| Phase 4 review and diagnosis | code-review, diagnosing-bugs |
+| Human-only setup when needed | wizard |
 
-| Role | Skills | Purpose |
-| --- | --- | --- |
-| Required | `grilling` | Specification and feature-discovery interviews |
-| Recommended for Phase 2 | `codebase-design`, `domain-modeling` | Architecture tradeoffs and domain vocabulary |
-| Recommended for Phase 3 as needed | `writing-for-agents`, `wizard` | Agent-facing documentation and human-only procedures |
-| Recommended for Phase 2 visual exploration | `prototype` | Bounded UI/logic experiments before implementation |
-| Phase 3 and 4b behavior implementation | `tdd` | Test-first behavior at agreed seams |
-| Phase 4 review and diagnosis | `code-review`, `diagnosing-bugs`, `wizard` | Standards/spec review, confirmed causes, human-only test setup |
-
-For Anthropic's `frontend-design` (recommended for Phase 2b and UI implementation),
-use its separate source and select `frontend-design` in the installer:
+For Phase 2b appearance and Phase 3 UI implementation, install Anthropic's separate
+[frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design):
 
 ```sh
 npx skills@latest add anthropics/skills
 ```
 
-[frontend-design source](https://github.com/anthropics/skills/tree/main/skills/frontend-design)
-is maintained by Anthropic, separately from the Pocock skills.
+Select frontend-design in that installer. Availability is checked when a skill is
+needed; Cartographer does not claim to use a missing skill. Its bundled research
+workflow and [domain integration rules](skills/cartographer/references/domain-guidance.md)
+retain project paths and acceptance timing when companion conventions differ.
+See [dependencies and compatibility](skills/cartographer/references/dependencies.md)
+for prerequisites, sources and evidence limits.
 
-Cartographer reads installed grilling and applies its own spec workflow.
-Scaffold-only requests can run independently. Additional skills are recommendations,
-not an automatic workflow. Keep Cartographer's bundled research workflow and
-existing document paths when using companion skills.
+## Browser prerequisite
 
-See [dependency installation and compatibility](skills/cartographer/references/dependencies.md)
-for prerequisites, installation scope, and verification. Use this `npx` route
-instead of also installing the same skills through an agent marketplace.
+Visual critique and parity checks require a working permitted real browser.
+Check local-page navigation and screenshot capture before Phase 2b preview work.
+Playwright/Chromium is one option; use the environment's supported browser tools.
+Having web search or an installed browser alone does not establish agent browser
+control. Installation is not automatic; unavailable checks remain explicit gaps.
 
-The interview procedure builds on [Matt Pocock's grilling skill](https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling).
-Earlier bundled workflow runs used upstream revision
-`95249b0b49782349740fd9b8c6ce32b4e59e497a`. Test4 exercised external companion-skill
-use through foundation, planning, design, a prototype and local implementation. Its [conversation](tests/test4/CONVERSATION.md)
-and [handover](tests/test4/HANDOVER.md) record the evidence and limitations;
-[skills-lock.json](tests/test4/skills-lock.json) records installed Pocock sources/hashes,
-not a complete reproducible version pin. The transcript is redacted, reconstructs
-early exchanges, and omits tool events; skill loading and execution order are
-reported rather than independently proven. Missing-dependency behavior, the manual
-wizard, hosted integration and rendered-browser behavior remain unproven. Newer
-installed revisions are not automatically covered by this run.
+## Documentation
 
-Phase 2b selects structure and appearance separately, using rendered directions
-for the first substantial UI feature. Phase 3 implements the approved style and
-compares desktop/mobile screenshots. Screenshot critique requires an available
-permitted browser, such as Playwright with Chromium; unavailable rendering is
-reported explicitly. Browser installation is not automatic. This revised visual
-workflow has not yet been behaviorally evaluated.
+Templates live in [assets/templates](skills/cartographer/assets/templates/).
+SPEC.md owns product intent; docs/GLOSSARY.md owns accepted domain terms;
+docs/plans/PLANS.md defines plan conventions. ARCHITECTURE.md, TESTING.md and
+RUNBOOK.md describe implemented facts as evidence becomes available. DESIGN.md
+is established for substantial UI work in Phase 2b. AGENTS.md starts as a template
+and is seeded after application tooling exists. HANDOVER.md records session state.
+Personal profiles, memory seeding and hooks are optional workflows.
 
-## Phase 4: Review and remediation
+## Evaluation and limitations
 
-[Review and remediation](skills/cartographer/references/phases/review-feature.md)
-is part of Cartographer's active workflow. It separates hands-on review/diagnosis
-from authorized fixes and repeats until the user and agent agree the feature is
-ready to move on. Explicit user confirmation marks the plan Complete.
+[Test4](tests/test4/README.md) exercised a broad foundation-to-implementation run.
+[Test5](tests/test5/README.md) exercised explicit visual choices, smaller delivery
+slices, ADRs, Standards/Spec review and a scoped browser-checked correction with
+user acceptance. Its full feature is still In progress; configured backend checks
+remain deferred, and screenshot checks cover selected account states only.
 
-To start, ask Cartographer to review the implemented feature against its accepted
-plan. After remediation planning, request the agreed fixes when ready. Existing
-authorization is honored; a review request alone does not authorize production fixes.
+These are qualitative examples, not controlled comparisons or guarantees across
+agents/projects. Published transcripts are redacted and omit tool events; early
+exchanges were captured retrospectively. Lockfiles record some skill sources and
+hashes, not complete reproducible environments. Full bug reproduction/test-first
+remediation, complete visual parity, live-service setup, and the final full-feature
+acceptance-to-next-feature transition still need broader evidence.
 
-This workflow and its expanded TDD integration have not yet been behaviorally
-evaluated; Test4 does not establish Phase 4 success.
+Use the [evaluation protocol](tests/evaluation/README.md) and
+[visual review checks](tests/evaluation/phase2b-visual-review.md) for future runs.
+Existing example apps remain as inspectable evidence; new runs belong in scratch
+projects or separate app repositories. No v1 tag or release is created by this
+preparation.
+
+## Attribution
+
+Companion skills are maintained by [Matt Pocock](https://github.com/mattpocock/skills)
+and [Anthropic](https://github.com/anthropics/skills). Bundled glossary format
+[provenance and license](skills/cartographer/references/glossary/UPSTREAM.md)
+are retained. Earlier bundled grilling tests used upstream revision
+95249b0b49782349740fd9b8c6ce32b4e59e497a; installed updates require fresh evaluation.

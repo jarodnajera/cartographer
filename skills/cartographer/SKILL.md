@@ -80,6 +80,10 @@ does not expand the user's agreed scope. Use client configuration or supported
 hooks for requirements that need enforcement, rather than claiming Markdown
 approval rules provide it.
 
+For vocabulary work and accepted architectural decisions, follow the shared
+[domain integration rules](references/domain-guidance.md), including glossary
+write timing and the batched ADR assessment at spec/plan acceptance.
+
 ## Phase 1: Establish the foundation
 
 Read and follow the spec workflow; it owns the detailed rules for scaffolding,
@@ -137,15 +141,9 @@ verified review can proceed directly to the completion decision.
 ## Phase 4b: Remediate and complete
 
 Follow [remediation](references/phases/review-feature.md#phase-4b-remediate-and-re-verify)
-for approved fixes and refactors, regression checks, and user re-checks. Present
-acceptance evidence and obtain explicit confirmation before marking the plan
-Complete. Repeat 4a/4b as new findings arise until the user and agent agree the
-feature is satisfactory for the agreed scope and ready for the next feature.
-Record blockers instead of declaring completion or repeating checks without new
-evidence. After the user explicitly accepts the feature and essential acceptance
-evidence is sufficient, mark its plan Complete and return to Phase 2a: suggest
-the next bounded feature or use the user's selection. Preserve the established
-foundation. Feature completion does not imply public-launch readiness.
+for agreed fixes, re-checks and the user acceptance loop. That workflow owns
+completion and the return to Phase 2a for the next selected feature; feature
+completion does not imply launch readiness.
 
 ## Toolbox and continuity
 

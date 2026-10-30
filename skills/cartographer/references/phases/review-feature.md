@@ -1,6 +1,6 @@
 # Phase 4: Review and remediate the feature
 
-Status: Active workflow — behavioral evaluation pending.
+Status: Active workflow — scoped review/remediation exercised in test5; full-loop evaluation pending.
 
 Use the accepted feature plan as the work record. Review first in Phase 4a;
 implement agreed remediation in Phase 4b. Feature completion is separate from
@@ -72,9 +72,7 @@ work may proceed with project tooling; record the resulting coverage limitation.
    or one already given within scope. If there are no actionable findings and
    acceptance evidence is sufficient, skip remediation and go directly to the
    completion decision below. If evidence is insufficient, report the remaining
-   work instead of declaring a clean review. Ask directly without quoting internal
-   phase rules to justify a routine approval pause; explain boundaries when asked
-   or when they materially affect the available next action.
+   work instead of declaring a clean review.
 
 ### Review scope and companion overrides
 
@@ -115,12 +113,11 @@ the agreed bug fixes in 4b. Neither skill replaces the user's hands-on acceptanc
 Choose a regression seam that can observe the actual failure:
 
 - Responsive layout needs a real-browser check at the problematic viewport or
-  container width, exercising representative task/invoice rows and checking action
+  container width, exercising representative controls and checking action
   placement and overflow. DOM stubs and CSS-rule-presence assertions do not prove
   the visual behavior. Follow the environment's permitted browser tooling.
 - Business-rule failures should use an agreed domain or database interface that
-  exercises the behavior, such as preserving unpaid-invoice reminders under an
-  archived project. Use independent expected results from the accepted requirements.
+  exercises the relevant state transition or eligibility rule. Use independent expected results from the accepted requirements.
 
 If the fix already exists, describe a new test as post-fix regression coverage,
 not test-first work. Where feasible and authorized, run that test against an
@@ -157,13 +154,14 @@ failure-sensitivity check actually ran or remains unverified.
 5. Update affected architecture, testing, runbook, glossary and durable AGENTS.md
    guidance using [Phase 3's documentation rules](implement-feature.md#document-the-implemented-system).
    Record confirmed causes and outcomes once in the feature plan. Remove temporary
-   diagnostic instrumentation without deleting unrelated user work.
+   diagnostic instrumentation without deleting unrelated user work. Apply the
+   [domain integration rules](../domain-guidance.md) when new terms or qualifying
+   architectural decisions are agreed during remediation.
 6. Give the user a focused re-check list for their reported defects. Await their
    results unless they explicitly delegate or waive the hands-on re-check;
    record that choice and the available evidence honestly. Apply feedback to the
-   finding it addresses. “Looks good so far” can resolve a re-checked defect while
-   the overall feature stays In progress; it is not acceptance of unchecked flows
-   or permission to skip the remaining full review.
+   finding it addresses; acceptance of a scoped correction does not accept unchecked
+   flows or waive the outstanding full review.
 7. Present the completion decision below. Unresolved essential acceptance criteria
    keep the feature open; do not turn them into deferrals without an explicit
    scope decision.

@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30 America/Los_Angeles",
+  "authorization": "User yes to proposed two source-based fixes, explicitly retaining unavailable browser verification.",
+  "baseline": "phase3-frontend-checkpoint.json; fixed HEAD 03c130eb7c3cd7428980034b6b022b4ada1d3f83; target untracked",
+  "findings": {
+    "SP-1": "Implemented awaiting re-check",
+    "SP-2": "Implemented awaiting re-check"
+  },
+  "files": [
+    {
+      "path": "lancealot/src/views/AuthView.vue",
+      "sha256": "d302d859ef1adf584b948d5aad3428f89299e88c0ac4bdc4fb39a4de7b4c21c6"
+    },
+    {
+      "path": "lancealot/src/router/index.ts",
+      "sha256": "b17dba3e144dcbf3bfdbf028e4833f46a827eb91862c54e504f4d6c9b0c341b4"
+    }
+  ],
+  "fresh_checks": {
+    "npm test": "14 passed",
+    "npm run build": "vue-tsc and production Vite build passed; exit 0",
+    "working_directory": "tests/test5/lancealot",
+    "runtime": "Node 24.22.1 via explicit npm child PATH"
+  },
+  "source_recheck": {
+    "Standards": "No new documented violations or source regressions in scoped changes.",
+    "Spec": "Both source findings addressed; runtime re-check pending."
+  },
+  "limits": [
+    "Runtime diagnosis unresolved; user approved best-effort source fixes despite missing reproduction.",
+    "No new tests at unconfirmed UI/navigation seam; existing tests do not verify visible symptoms.",
+    "Browser unavailable; no rendering/interaction/parity claim.",
+    "Live backend checks remain deferred and were not run.",
+    "Whole account/tracking feature remains In progress."
+  ]
+}

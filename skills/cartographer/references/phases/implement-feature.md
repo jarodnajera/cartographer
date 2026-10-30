@@ -121,7 +121,7 @@ Update only the documents affected by the work:
 
 Link shared facts instead of repeating spec requirements or copying the plan into
 other documents. Update SPEC.md only for approved product changes. Offer ADRs
-under the qualifying criteria in [Phase 2a](plan-feature.md).
+using the shared [domain integration rules](../domain-guidance.md).
 
 ## Human intervention: wizard
 

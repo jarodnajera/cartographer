@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-30 America/Los_Angeles",
+  "requested_surface": "newly configured Playwright MCP server",
+  "playwright_mcp_tools_exposed": [],
+  "server_connection_or_startup_attempted": false,
+  "observed_playwright_server_error": null,
+  "reason": "No callable Playwright MCP tool is exposed in this conversation. A server failure cannot be inferred.",
+  "separate_historical_builtin_browser_error": "No browser is available",
+  "browser_evidence_this_attempt": {
+    "screenshots": 0,
+    "desktop_mobile_checks": false,
+    "console_checks": false,
+    "actual_redirect_checks": false
+  },
+  "finding_statuses": {
+    "SP-1": "Implemented awaiting re-check; backend-dependent cases blocked by user deferral",
+    "SP-2": "Implemented awaiting re-check; browser tool exposure blocked"
+  },
+  "live_backend_checks": "Deferred by user; not attempted.",
+  "next_step": "Resume in a session exposing callable Playwright MCP tools, then open app and capture screenshot before claiming browser verification.",
+  "resume_recheck": {
+    "date": "2026-10-30 America/Los_Angeles",
+    "playwright_mcp_tools_exposed": [],
+    "discovery": "Filtered available tool names/descriptions for Playwright/browser: only generic Node REPL tools matched; none are Playwright MCP server tools.",
+    "server_connection_or_startup_attempted": false,
+    "observed_playwright_server_error": null,
+    "local_app": {
+      "url": "http://127.0.0.1:5173/",
+      "existing_listener": "node PID 7149 on 127.0.0.1:5173",
+      "initial_sandbox_http_check": "curl exit 7 / HTTP 000 despite existing listener",
+      "approved_outside_sandbox_http_check": "curl exit 0 / HTTP 200",
+      "restarted": false,
+      "limit": "HTTP availability only; no browser rendering or navigation evidence."
+    },
+    "checks": {
+      "expired_verification_resend": "Blocked: no callable Playwright MCP tools; no preview or actual expiry path exercised.",
+      "expired_password_recovery": "Blocked: no callable Playwright MCP tools; no preview or actual recovery path exercised.",
+      "protected_route_denied_unavailable": "Blocked: no callable Playwright MCP tools; real provider paths also depend on deferred backend checks.",
+      "desktop_mobile_screenshots": "Blocked: no callable Playwright MCP tools.",
+      "console_errors": "Not inspected: no callable Playwright MCP tools."
+    },
+    "application_source_changes": false,
+    "unit_build_checks_rerun": false,
+    "acceptance": "No finding resolved; user re-check of existing fixes still required before final feature acceptance."
+  },
+  "historical_record": true,
+  "superseded_by": "phase4-browser-recheck.json"
+}

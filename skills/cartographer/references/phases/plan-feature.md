@@ -15,7 +15,7 @@
    for this feature only. See [dependency setup](../dependencies.md) if
    grilling is missing.
 4. Apply installed `domain-modeling` where terminology or relationships need
-   clarification.
+   clarification, following the [domain integration rules](../domain-guidance.md).
 5. Apply installed `codebase-design` where interfaces, responsibilities, or test
    boundaries need thought.
 6. Where a question is hard to judge on paper, offer installed `prototype`. Use
@@ -34,8 +34,9 @@
    human-only setup steps, and criteria needing live-service verification.
    Include each prototype's verdict
    and any unresolved findings.
-8. Update docs/GLOSSARY.md with newly agreed terms, and propose any spec change
-   for approval before finishing the plan.
+8. Record proposed terminology in the plan and propose any needed spec change.
+   Publish glossary meanings only after acceptance under the domain integration
+   rules, preserving settled project vocabulary.
 9. Present the written plan and summarize its scope, approach, and remaining
    decisions. For UI features, ask: "Does this scope and approach look right to
    take into design?" This confirms direction; keep the plan in Draft until final
@@ -53,9 +54,10 @@ for planning work that can proceed independently.
 
 Use the glossary's agreed terms for wireframe labels, plan wording, code names,
 and tests; add _In code_ mappings only as identifiers exist. Keep decisions in the
-feature plan. Offer an ADR only when a decision is expensive to reverse,
-surprising without context, and based on a genuine tradeoff. Do not generate ADRs
-for every choice.
+feature plan. At final written-plan acceptance, perform the
+[batched ADR assessment](../domain-guidance.md#adr-assessment-at-acceptance) and
+update accepted glossary meanings. For UI features, this follows Phase 2b, not
+merely confirmation of planning direction.
 
 Keep small changes lightweight. Surface material product-scope changes for a
 focused spec update rather than silently superseding accepted requirements.

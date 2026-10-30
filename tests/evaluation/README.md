@@ -111,3 +111,22 @@ Use the [Phase 2b visual-direction checks](phase2b-visual-review.md) for separat
 authorized design/implementation runs. Keep this evidence separate from Phase 1
 scores. Test4 remains the historical before example; do not redesign it to make
 its original evaluation appear to pass the new workflow.
+
+## Next full-cycle run (test5)
+
+Use a fresh bounded feature in an external scratch project. Before starting,
+verify installed code-review, diagnosing-bugs and tdd, and demonstrate that the
+permitted browser opens a local page and captures a screenshot. Retain the setup
+result and source revisions; a missing prerequisite is a gap, not a passing run.
+
+Exercise the rendered-choice Phase 2b workflow and carry one reported defect
+through the full Standards/Spec review, reproducible diagnosis, authorized
+remediation, meaningful regression check, user re-check and explicit acceptance.
+Keep fixture/evaluator knowledge out of the agent's initial prompt. Preserve the
+raw transcript, review reports and before/after evidence. Record when a candidate
+ADR assessment occurs and whether glossary writes wait for acceptance.
+
+This is a proposed evaluation, not a completed test. Domain-modeling's newly
+extended Phase 1 role is an additional variable: evaluate it separately with the
+same answers before attributing interview improvements to that change. A combined
+full-cycle run establishes integration evidence, not causal isolation.

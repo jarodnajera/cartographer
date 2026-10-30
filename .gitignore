@@ -5,7 +5,10 @@
 .env.*
 !.env.example
 
-# Test4 companion skills are local installations, not vendored source.
-/tests/test4/.agents/
-/tests/test4/.claude/
-/tests/test4/.codex/
+# Evaluation companion skills/configuration stay local; retain source lockfiles.
+/tests/**/.agents/
+/tests/**/.claude/
+/tests/**/.codex/
+
+# Transient browser output; selected evaluation evidence lives under docs/plans/evidence/.
+.playwright-mcp/
